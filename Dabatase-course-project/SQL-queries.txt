@@ -1,0 +1,487 @@
+CREATE TABLE DISPOSITIVI(
+    Codice_Dispositivo INTEGER,
+    CONSTRAINT PK_DISPOSITIVI PRIMARY KEY (Codice_Dispositivo)
+);
+
+CREATE TABLE CASELLI(
+    Numero_Casello INTEGER,
+    Nome_Uscita VARCHAR(30),
+    Id_Casello INTEGER,
+    CONSTRAINT PK_CASELLI PRIMARY KEY (Id_Casello)
+);  
+
+CREATE TABLE CLIENTI(
+    Nome VARCHAR(20) NOT NULL,
+    Cognome VARCHAR(20) NOT NULL,
+    Data_Nascita DATE NOT NULL,
+    Id_Cliente INTEGER,
+    Via VARCHAR(15),
+    Citta VARCHAR(15),
+    Civico INTEGER,
+    CAP INTEGER,
+    CONSTRAINT PK_CLIENTI PRIMARY KEY (Id_Cliente)
+);
+
+CREATE TABLE AUTOMOBILI(
+    Targa VARCHAR(7),
+    Modello VARCHAR(30),
+    Cliente INTEGER NOT NULL,
+    Proprieta VARCHAR(2) CHECK(Proprieta = 'si' OR Proprieta = 'no'),
+    Codice_Dispositivo INTEGER NOT NULL,
+    CONSTRAINT PK_AUTOMOBILI PRIMARY KEY (Targa)
+);
+
+CREATE TABLE CARTE_DI_CREDITO(
+    Id_Carta INTEGER,
+    Numero_Carta VARCHAR(20) NOT NULL,
+    Scadenza DATE NOT NULL,
+    Id_Cliente INTEGER,
+    CONSTRAINT PK_C_D_C PRIMARY KEY (Id_Carta)
+);  
+
+CREATE TABLE CONTI_CORRENTI(
+    Id_Conto INTEGER,
+    Numero_Conto VARCHAR(20) NOT NULL,
+    Id_Cliente INTEGER,
+	CONSTRAINT PK_C_C PRIMARY KEY (Id_Conto)
+);
+
+CREATE TABLE TRAGITTI(
+    Numero_Tragitto INTEGER,
+    Codice_Dispositivo INTEGER NOT NULL,
+    Data_In TIMESTAMP,
+    Data_Out TIMESTAMP,
+    Numero_Casello_In INTEGER,
+    Numero_Casello_Out INTEGER,
+	CONSTRAINT PK_TRAGITTI PRIMARY KEY (Numero_Tragitto, Codice_Dispositivo)
+);
+
+
+--Aggiungiamo i Vincoli d'integrità referenziale
+ALTER TABLE AUTOMOBILI
+ADD CONSTRAINT FK_AUTOMOBILI_DISPOSITIVI
+FOREIGN KEY (Codice_Dispositivo) REFERENCES DISPOSITIVI (Codice_Dispositivo);
+
+ALTER TABLE AUTOMOBILI
+ADD CONSTRAINT FK_AUTOMOBILI_CLIENTI 
+FOREIGN KEY (Cliente) REFERENCES CLIENTI (Id_Cliente)
+ON DELETE CASCADE;
+
+ALTER TABLE CARTE_DI_CREDITO
+ADD CONSTRAINT FK_CDC_CLIENTI 
+FOREIGN KEY (Id_Cliente) REFERENCES CLIENTI (Id_Cliente)
+ON DELETE CASCADE;
+
+ALTER TABLE CONTI_CORRENTI
+ADD CONSTRAINT FK_CC_CLIENTI 
+FOREIGN KEY (Id_Cliente) REFERENCES CLIENTI (Id_Cliente)
+ON DELETE CASCADE;
+
+ALTER TABLE TRAGITTI
+ADD CONSTRAINT FK_TRAGITTI_DISPOSITIVI
+FOREIGN KEY (Codice_Dispositivo) REFERENCES DISPOSITIVI (Codice_Dispositivo)
+ON DELETE CASCADE;
+
+ALTER TABLE TRAGITTI
+ADD CONSTRAINT FK_TRAGITTI_CASELLO_IN FOREIGN KEY (Numero_Casello_In) 
+REFERENCES CASELLI (Id_Casello)
+ON DELETE SET NULL;
+
+ALTER TABLE TRAGITTI
+ADD CONSTRAINT FK_TRAGITTI_CASELLO_OUT FOREIGN KEY (Numero_Casello_Out) 
+REFERENCES CASELLI (Id_Casello)
+ON DELETE SET NULL;
+
+
+
+
+--Popoliamo il DB
+-- Popoliamo la tabella DISPOSITIVI
+INSERT INTO DISPOSITIVI (Codice_Dispositivo) VALUES (1);
+INSERT INTO DISPOSITIVI (Codice_Dispositivo) VALUES (2);
+
+-- Popoliamo la tabella CASELLI
+INSERT INTO CASELLI (Id_Casello, Nome_Uscita, Numero_Casello) VALUES (1, 'NAPOLI EST', 1);
+INSERT INTO CASELLI (Id_Casello, Nome_Uscita, Numero_Casello) VALUES (2, 'NAPOLI EST', 2);
+INSERT INTO CASELLI (Id_Casello, Nome_Uscita, Numero_Casello) VALUES (3, 'ROMA SUD', 2);
+INSERT INTO CASELLI (Id_Casello, Nome_Uscita, Numero_Casello) VALUES (4, 'CASERTA', 1);
+INSERT INTO CASELLI (Id_Casello, Nome_Uscita, Numero_Casello) VALUES (5, 'FUORIGROTTA', 1);
+
+-- Popoliamo la tabella CLIENTI
+INSERT INTO CLIENTI (Nome, Cognome, Data_Nascita, Id_Cliente, Via, Citta, Civico, CAP) VALUES ('Mario', 'Rossi', '18-Sep-2001', 1, 'Via Roma', 'Napoli', 10, 80125);
+INSERT INTO CLIENTI (Nome, Cognome, Data_Nascita, Id_Cliente, Via, Citta, Civico, CAP) VALUES ('Giulia', 'Bianchi', '3-Aug-1996', 2, 'Via del corso', 'Milano', 3, 20100);
+INSERT INTO CLIENTI (Nome, Cognome, Data_Nascita, Id_Cliente, Via, Citta, Civico, CAP) VALUES ('Giuseppe', 'Esposito', '25-Apr-1972', 3, 'Piazza Grande', 'Bologna', 5, 60292);
+
+-- Popoliamo la tabella CARTE_DI_CREDITO
+INSERT INTO CARTE_DI_CREDITO (Id_Carta, Numero_Carta, Scadenza, Id_Cliente) VALUES (1, '1234567812345678', TO_DATE('2025-12-31', 'YYYY-MM-DD'), 1);
+INSERT INTO CARTE_DI_CREDITO (Id_Carta, Numero_Carta, Scadenza, Id_Cliente) VALUES (2, '9876543298765432', TO_DATE('2024-06-30', 'YYYY-MM-DD'), 3);
+
+-- Popoliamo la tabella CONTI_CORRENTI
+INSERT INTO CONTI_CORRENTI (Id_Conto, Numero_Conto, Id_Cliente) VALUES (1, '100100', 1);
+INSERT INTO CONTI_CORRENTI (Id_Conto, Numero_Conto, Id_Cliente) VALUES (2, '200200', 2);
+
+-- Popoliamo la tabella AUTOMOBILI
+INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) VALUES ('AB123CD', 'Fiat 500', 1, 'si', 1);
+INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) VALUES ('NA926PO', 'Toyota Corolla', 2, 'no', 2);
+INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) VALUES ('AZ321BC', 'Audi A3', 1, 'no', 1);
+
+-- Popoliamo la tabella TRAGITTI
+INSERT INTO TRAGITTI (Numero_Tragitto, Codice_Dispositivo, Data_In, Data_Out, Numero_Casello_In, Numero_Casello_Out) VALUES (1, 1, '10-Sep-23 08-00-00', '10-Sep-23 09-00-00', 1, 2);
+INSERT INTO TRAGITTI (Numero_Tragitto, Codice_Dispositivo, Data_In, Data_Out, Numero_Casello_In, Numero_Casello_Out) VALUES (2, 1, '3-May-22 10-00-00', '3-May-22 12-15-00', 2, 3);
+INSERT INTO TRAGITTI (Numero_Tragitto, Codice_Dispositivo, Data_In, Data_Out, Numero_Casello_In, Numero_Casello_Out) VALUES (3, 2, '25-Dec-19 12-00-00', '25-Dec-19 12-30-00', 3, 1);
+
+
+--CREIAMO TRIGGER
+
+--Verifichiamo che la data di uscita sia successiva a quella di ingresso
+CREATE OR REPLACE TRIGGER DATE_TRAGITTO_CONSISTENTI
+BEFORE INSERT OR UPDATE ON TRAGITTI
+FOR EACH ROW
+DECLARE
+	ERRORE EXCEPTION;
+BEGIN
+    IF :NEW.Data_Out <= :NEW.Data_In THEN
+    	RAISE ERRORE;
+    END IF;
+EXCEPTION
+    	WHEN ERRORE THEN
+			RAISE_APPLICATION_ERROR(-20001, 
+    		'La data di uscita deve essere successiva alla data di ingresso');
+END;
+
+/
+
+--Esempio
+--INSERT INTO TRAGITTI (Numero_Tragitto, Codice_Dispositivo, 
+--    Data_In, Data_Out, Numero_Casello_In, Numero_Casello_Out) 
+--VALUES (10, 1, '20-Sep-23 08-00-00', '10-Sep-23 09-00-00', 1, 2);
+
+
+--Verifichiamo che per ogni dispositivo ci siano al più 2 auto di un unico cliente
+CREATE OR REPLACE TRIGGER NUMERO_AUTO
+BEFORE INSERT OR UPDATE ON AUTOMOBILI
+FOR EACH ROW
+DECLARE
+    NUMERO_AUTO INTEGER;
+	ALTRO_CLIENTE INTEGER;
+	ERRORE_NUM_AUTO EXCEPTION;
+    ERRORE_CLIENTI_DIVERSI EXCEPTION;
+BEGIN
+    --Controlliamo il numero di auto già associate al dispositivo
+    SELECT COUNT(*) INTO NUMERO_AUTO FROM AUTOMOBILI
+    WHERE Codice_Dispositivo = :NEW.Codice_Dispositivo; --AND CLIENTE = NEW:CLIENTE;
+    
+    IF NUMERO_AUTO >= 2 THEN
+        RAISE ERRORE_NUM_AUTO;
+    END IF;
+
+	--Controlliamo che il dispositivo sia utilizzato da un unico cliente
+	SELECT COUNT(*) INTO ALTRO_CLIENTE
+    FROM AUTOMOBILI
+    WHERE Codice_Dispositivo = :NEW.Codice_Dispositivo AND Cliente <> :NEW.Cliente;
+
+    IF ALTRO_CLIENTE > 0 THEN --(Il dispositivo è già associato a un altro cliente)
+        RAISE ERRORE_CLIENTI_DIVERSI;
+    END IF;
+
+EXCEPTION
+    WHEN ERRORE_NUM_AUTO THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Sono già presenti 2 automobili associate allo stesso dispositivo');
+	WHEN ERRORE_CLIENTI_DIVERSI THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Il dispositivo è di un altro cliente');
+END;
+
+/
+--Esempio 1
+/*INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) 
+    VALUES ('AB123CD', 'Fiat 500', 1, 'si', 1);
+INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) 
+    VALUES ('NA926PO', 'Toyota Corolla', 1, 'no', 1);
+INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo)
+    VALUES ('AZ321BC', 'Audi A3', 1, 'no', 1);
+*/
+--Esempio 2
+/*INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) 
+    VALUES ('AB123CD', 'Fiat 500', 1, 'si', 1);
+INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) 
+    VALUES ('NA926PO', 'Toyota Corolla', 2, 'no', 1);*/
+
+
+--Verifichiamo che la carta di credito inserita non sia scaduta
+CREATE OR REPLACE TRIGGER SCADENZA_CARTA
+BEFORE INSERT OR UPDATE ON CARTE_DI_CREDITO
+FOR EACH ROW
+DECLARE
+    ERRORE EXCEPTION;
+BEGIN
+    IF :NEW.Scadenza <= SYSDATE THEN
+        RAISE ERRORE;
+    END IF;
+EXCEPTION
+    WHEN ERRORE THEN
+        RAISE_APPLICATION_ERROR(-20003, 'La carta di credito è già scaduta');
+END;
+
+/
+
+--Esempio
+--DELETE FROM CARTE_DI_CREDITO WHERE Id_Cliente=1;
+--INSERT INTO CARTE_DI_CREDITO (Id_Carta, Numero_Carta, Scadenza, Id_Cliente) 
+--VALUES (1, '1234567812345678', TO_DATE('2022-12-31', 'YYYY-MM-DD'), 1);
+
+    
+--Verifichiamo che il cliente sia maggiorenne
+CREATE OR REPLACE TRIGGER CLIENTE_MAGGIORENNE
+BEFORE INSERT OR UPDATE ON CLIENTI
+FOR EACH ROW
+DECLARE
+    ETA NUMBER;
+	ERRORE EXCEPTION;
+BEGIN
+    ETA := MONTHS_BETWEEN(SYSDATE, :NEW.Data_Nascita)/12;
+	IF ETA < 18 THEN
+        RAISE ERRORE;
+    END IF;
+EXCEPTION
+    WHEN ERRORE THEN
+    	RAISE_APPLICATION_ERROR(-20004, 'Il cliente deve essere maggiorenne');
+END;
+
+/
+
+--Esempio
+--INSERT INTO CLIENTI (Nome, Cognome, Data_Nascita, Id_Cliente, Via, Citta, Civico, CAP) 
+--VALUES ('Mario', 'Rossi', '18-Sep-2010', 5, 'Via Roma', 'Napoli', 10, 80125);
+
+
+--Verifichiamo che esista un metodo di pagamento quando si inserisce un'automobile
+CREATE OR REPLACE TRIGGER METODO_PAGAMENTO_ESISTENTE
+BEFORE INSERT OR UPDATE ON AUTOMOBILI
+FOR EACH ROW
+DECLARE
+    NUM_CONTI INTEGER;
+	NUM_CARTE INTEGER;
+	ERRORE EXCEPTION;
+BEGIN
+    SELECT COUNT (*) INTO NUM_CARTE
+    FROM CARTE_DI_CREDITO
+    WHERE Id_Cliente = :NEW.Cliente;
+
+    SELECT COUNT (*) INTO NUM_CONTI
+    FROM CONTI_CORRENTI
+    WHERE Id_Cliente = :NEW.Cliente;
+
+    IF (NUM_CARTE = 0 AND NUM_CONTI = 0) THEN
+    	RAISE ERRORE;
+	END IF;
+EXCEPTION
+    WHEN ERRORE THEN
+    	RAISE_APPLICATION_ERROR(-20005, 
+    		'Il cliente associato all automobile appena inserita non possiede 
+   			 alcun metodo di pagamento!');
+END;
+
+/
+
+--Esempio
+--INSERT INTO CLIENTI (Nome, Cognome, Data_Nascita, Id_Cliente, Via, Citta, Civico, CAP) 
+--VALUES ('Mario', 'Rossi', '18-Sep-2001', 5, 'Via Roma', 'Napoli', 10, 80125);
+--INSERT INTO AUTOMOBILI (Targa, Modello, Cliente, Proprieta, Codice_Dispositivo)
+--VALUES ('AZ321CC', 'Audi A3', 10, 'no', 2);
+
+
+    
+--Verifichiamo che il cliente non inserisca più di una carta
+CREATE OR REPLACE TRIGGER LIMITE_CARTE
+BEFORE INSERT ON CARTE_DI_CREDITO
+FOR EACH ROW
+DECLARE
+    NUMERO_CARTE INTEGER;
+	ERRORE EXCEPTION;
+BEGIN
+    SELECT COUNT(CDC.Id_Carta) INTO NUMERO_CARTE
+    FROM CARTE_DI_CREDITO CDC JOIN CLIENTI C ON C.Id_Cliente = CDC.Id_Cliente
+    WHERE C.Id_Cliente = :NEW.Id_Cliente;
+
+    IF NUMERO_CARTE > 0 THEN
+        RAISE ERRORE;
+    END IF;
+EXCEPTION
+    WHEN ERRORE THEN
+        RAISE_APPLICATION_ERROR(-20006, 'Il cliente ha già una carta inserita');
+END;
+
+/
+
+/*INSERT INTO CARTE_DI_CREDITO (Id_Carta, Numero_Carta, Scadenza, Id_Cliente) 
+VALUES (10, '1234907812345678', TO_DATE('2025-12-31', 'YYYY-MM-DD'), 5);
+INSERT INTO CARTE_DI_CREDITO (Id_Carta, Numero_Carta, Scadenza, Id_Cliente)
+VALUES (15, '5467812345678', TO_DATE('2025-12-31', 'YYYY-MM-DD'), 5);
+*/
+
+--Verifichiamo che il cliente non inserisca più di un conto
+CREATE OR REPLACE TRIGGER LIMITE_CONTI
+BEFORE INSERT ON CONTI_CORRENTI
+FOR EACH ROW
+DECLARE
+    NUMERO_CONTI INTEGER;
+	ERRORE EXCEPTION;
+BEGIN
+    SELECT COUNT(CC.Id_Conto) INTO NUMERO_CONTI
+    FROM CONTI_CORRENTI CC JOIN CLIENTI C ON C.Id_Cliente = CC.Id_Cliente
+    WHERE C.Id_Cliente = :NEW.Id_Cliente;
+
+    IF NUMERO_CONTI > 0 THEN
+        RAISE ERRORE;
+    END IF;
+EXCEPTION
+    WHEN ERRORE THEN
+        RAISE_APPLICATION_ERROR(-20007, 'Il cliente ha già un conto inserito');
+END;
+
+/
+
+--INSERT INTO CONTI_CORRENTI (Id_Conto, Numero_Conto, Id_Cliente) VALUES (10, '199100', 5);
+--INSERT INTO CONTI_CORRENTI (Id_Conto, Numero_Conto, Id_Cliente) VALUES (15, '108000', 5);
+
+
+CREATE VIEW TRAGITTI_PER_CLIENTE
+AS SELECT COUNT(T.Numero_Tragitto) AS NUM_TRAGITTI, C.Nome AS NOME, 
+C.Cognome AS COGNOME, C.Id_Cliente AS CODICE_CLIENTE
+FROM (CLIENTI C LEFT JOIN AUTOMOBILI A ON C.Id_Cliente = A.Cliente)
+LEFT JOIN TRAGITTI T ON T.Codice_Dispositivo = A.Codice_Dispositivo
+GROUP BY C.Id_Cliente, C.Nome, C.Cognome;
+--Esempi Vista
+/*SELECT * FROM TRAGITTI_PER_CLIENTE;
+
+SELECT NOME, COGNOME, NUM_TRAGITTI
+FROM TRAGITTI_PER_CLIENTE
+WHERE NUM_TRAGITTI = (SELECT MAX(NUM_TRAGITTI) FROM TRAGITTI_Per_CLIENTE);*/
+
+
+CREATE VIEW METODI_DI_PAGAMENTO
+AS SELECT C.Id_Cliente AS CLIENTE, CDC.Numero_Carta AS NUMERO_CARTA, 
+CC.Numero_Conto AS NUMERO_CONTO
+FROM (CARTE_DI_CREDITO CDC RIGHT JOIN CLIENTI C ON CDC.Id_Cliente = C.Id_Cliente)
+LEFT JOIN CONTI_CORRENTI CC ON C.Id_Cliente = CC.Id_Cliente
+ORDER BY C.Id_Cliente;
+
+--Esempi Vista
+/*SELECT * FROM METODI_DI_PAGAMENTO;
+
+SELECT COUNT(NUMERO_CARTA) AS CARTE, COUNT(NUMERO_CONTO) AS CONTI
+FROM METODI_DI_PAGAMENTO;*/
+
+
+CREATE VIEW Tragitti_Proprietari_con_ogni_Automobile AS
+SELECT C.Id_Cliente, C.Nome AS Nome_Proprietario, C.Cognome AS Cognome_Proprietario, 
+T.Numero_Tragitto AS Num_Tragitto, A.Targa AS Automobile, A.Proprieta AS Proprieta, 
+T.Data_In AS Data_Ingresso, T.Data_Out AS Data_Uscita
+FROM ((CLIENTI C JOIN AUTOMOBILI A ON C.Id_Cliente=A.Cliente) 
+LEFT JOIN TRAGITTI T ON A.Codice_Dispositivo=T.Codice_Dispositivo)
+WHERE A.Proprieta='si';
+
+--Esempi Vista
+/*SELECT * FROM Tragitti_Proprietari_con_ogni_Automobile;
+
+SELECT T.Nome_Proprietario, T.Cognome_Proprietario, T.Automobile AS Auto_Senza_Tragitto
+FROM Traggiti_Proprietari_con_ogni_Automobile T
+WHERE T.Data_Uscita < SYSDATE - 365;*/
+
+
+
+--STORED PROCEDURE PER IL NUMERO DI TRAGITTI PER CLIENTE
+CREATE OR REPLACE PROCEDURE TRAGITTI_TOTALI(
+    Cliente_Input IN CLIENTI.Id_Cliente%TYPE,
+    Num_Tragitti_Output OUT INTEGER
+) IS
+BEGIN
+	SELECT NUM_TRAGITTI INTO Num_Tragitti_Output
+	FROM TRAGITTI_PER_CLIENTE --Vista
+	WHERE CODICE_CLIENTE = Cliente_Input;
+
+	DBMS_OUTPUT.PUT_LINE('Il cliente con ID = ' || Cliente_Input || ' ha effettuato ' 
+    || Num_Tragitti_Output || ' tragitti.');
+
+END;
+
+--Esempio
+/*DECLARE TRAGITTI INTEGER;
+BEGIN
+	TRAGITTI_TOTALI(1, TRAGITTI);
+END;*/
+
+
+--Vista che ci serve per la prossima stored Procedure
+CREATE VIEW TRAGITTI_NON_CONCLUSI
+AS SELECT COUNT(T.Numero_Tragitto) AS NUM_TRAGITTI, T.Numero_Casello_In, C.Nome_Uscita AS NOME
+FROM TRAGITTI T JOIN CASELLI C ON T.Numero_Casello_In = C.Id_Casello
+WHERE T.Numero_Casello_Out IS NULL
+GROUP BY T.Numero_Casello_In, C.Nome_Uscita;
+
+--Stored Procedure per la segnalazione dell'uscita più trafficata
+CREATE OR REPLACE PROCEDURE USCITA_PIU_TRAFFICATA(
+    USCITA_TRAFFICATA OUT CASELLI.Nome_Uscita%TYPE
+) IS
+BEGIN
+	SELECT NOME INTO USCITA_TRAFFICATA
+	FROM TRAGITTI_NON_CONCLUSI
+	WHERE NUM_TRAGITTI = (SELECT MAX(NUM_TRAGITTI) FROM TRAGITTI_NON_CONCLUSI);
+
+	DBMS_OUTPUT.PUT_LINE('. Si sconsiglia di NON prendere l uscita ' || USCITA_TRAFFICATA || 
+    ' in quanto è la più trafficata!');
+
+END;
+
+--Esempio
+/*INSERT INTO TRAGITTI (Numero_Tragitto, Codice_Dispositivo, Data_In, Numero_Casello_In) VALUES (5, 1, '20-Feb-24 08-30-00', 4);
+INSERT INTO TRAGITTI (Numero_Tragitto, Codice_Dispositivo, Data_In, Numero_Casello_In) VALUES (5, 2, '20-Feb-24 08-30-00', 5);
+INSERT INTO TRAGITTI (Numero_Tragitto, Codice_Dispositivo, Data_In, Numero_Casello_In) VALUES (6, 2, '20-Feb-24 08-35-00', 5);
+SELECT * FROM TRAGITTI_NON_CONCLUSI;
+
+DECLARE USCITA CASELLI.Nome_Uscita%TYPE;
+BEGIN
+	USCITA_PIU_TRAFFICATA(USCITA);
+END;*/
+
+
+/
+
+CREATE OR REPLACE PROCEDURE Inserimento_Automobile(
+    p_Targa IN AUTOMOBILI.Targa%TYPE,
+    p_Modello IN AUTOMOBILI.Modello%TYPE,
+    p_Cliente IN AUTOMOBILI.Cliente%TYPE,
+    p_Proprieta IN AUTOMOBILI.Proprieta%TYPE, 
+    p_CodiceDispositivo IN AUTOMOBILI.Codice_Dispositivo%TYPE
+)
+IS
+BEGIN
+    INSERT INTO AUTOMOBILI(Targa, Modello, Cliente, Proprieta, Codice_Dispositivo) 
+    VALUES (p_Targa, p_Modello, p_Cliente, p_Proprieta, p_CodiceDispositivo);
+    COMMIT;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Errore durante inserimento automobile');
+        ROLLBACK;
+        RAISE;
+END Inserimento_Automobile;
+    
+/
+
+--Esempio 
+DECLARE
+    v_Targa              AUTOMOBILI.Targa%TYPE := 'CZ963ZZ';
+    v_Modello            AUTOMOBILI.Modello%TYPE := 'Chevrolet Matiz';
+    v_Cliente            AUTOMOBILI.Cliente%TYPE := 2;
+    v_Proprieta          AUTOMOBILI.Proprieta%TYPE := 'si';
+    v_CodiceDispositivo  AUTOMOBILI.Codice_Dispositivo%TYPE := 5;
+
+BEGIN
+    Inserimento_Automobile(v_Targa, v_Modello, v_Cliente, v_Proprieta, v_CodiceDispositivo);
+
+    DBMS_OUTPUT.PUT_LINE('Automobile inserita con successo');
+
+END;
+
+/

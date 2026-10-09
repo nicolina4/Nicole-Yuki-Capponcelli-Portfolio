@@ -1,0 +1,3159 @@
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"board.c"
+  14              		.file 1 "c:\\chibistudio\\tools\\gnu tools arm embedded\\10.3 2021.10\\arm-none-eabi\\include\\mac
+  15              		.file 2 "c:\\chibistudio\\tools\\gnu tools arm embedded\\10.3 2021.10\\arm-none-eabi\\include\\sys
+  16              		.file 3 "../../chibios2111/os/common/ext/ST/STM32G4xx/stm32g474xx.h"
+  17              		.file 4 "../../chibios2111/os/hal/ports/STM32/LLD/GPIOv2/stm32_gpio.h"
+  18              		.file 5 "../../chibios2111/os/hal/boards/ST_NUCLEO64_G474RE/board.c"
+  19              		.section	.gnu.debuglto_.debug_info,"e",%progbits
+  20              	.Ldebug_info0:
+  21              		.hidden	board.c.997b76ef
+  22              		.weak	board.c.997b76ef
+  23              	board.c.997b76ef:
+  24 0000 12050000 		.4byte	0x512
+  25 0004 0400     		.2byte	0x4
+  26 0006 00000000 		.4byte	.Ldebug_abbrev0
+  27 000a 04       		.byte	0x4
+  28 000b 01       		.uleb128 0x1
+  29 000c 8C030000 		.4byte	.LASF84
+  30 0010 0C       		.byte	0xc
+  31 0011 33030000 		.4byte	.LASF85
+  32 0015 0F000000 		.4byte	.LASF86
+  33 0019 00000000 		.4byte	.Ldebug_line0
+  34 001d 02       		.uleb128 0x2
+  35 001e 04       		.byte	0x4
+  36 001f 05       		.byte	0x5
+  37 0020 696E7400 		.ascii	"int\000"
+  38 0024 03       		.uleb128 0x3
+  39 0025 04       		.byte	0x4
+  40 0026 07       		.byte	0x7
+  41 0027 75030000 		.4byte	.LASF0
+  42 002b 03       		.uleb128 0x3
+  43 002c 08       		.byte	0x8
+  44 002d 05       		.byte	0x5
+  45 002e EE000000 		.4byte	.LASF1
+  46 0032 03       		.uleb128 0x3
+  47 0033 08       		.byte	0x8
+  48 0034 04       		.byte	0x4
+  49 0035 5D010000 		.4byte	.LASF2
+  50 0039 03       		.uleb128 0x3
+  51 003a 01       		.byte	0x1
+  52 003b 06       		.byte	0x6
+  53 003c 8D010000 		.4byte	.LASF3
+  54 0040 03       		.uleb128 0x3
+  55 0041 01       		.byte	0x1
+  56 0042 08       		.byte	0x8
+  57 0043 69010000 		.4byte	.LASF4
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 2
+
+
+  58 0047 03       		.uleb128 0x3
+  59 0048 02       		.byte	0x2
+  60 0049 05       		.byte	0x5
+  61 004a 68000000 		.4byte	.LASF5
+  62 004e 04       		.uleb128 0x4
+  63 004f AE000000 		.4byte	.LASF8
+  64 0053 01       		.byte	0x1
+  65 0054 39       		.byte	0x39
+  66 0055 19       		.byte	0x19
+  67 0056 5A000000 		.4byte	0x5a
+  68 005a 03       		.uleb128 0x3
+  69 005b 02       		.byte	0x2
+  70 005c 07       		.byte	0x7
+  71 005d 58020000 		.4byte	.LASF6
+  72 0061 03       		.uleb128 0x3
+  73 0062 04       		.byte	0x4
+  74 0063 05       		.byte	0x5
+  75 0064 15010000 		.4byte	.LASF7
+  76 0068 04       		.uleb128 0x4
+  77 0069 90000000 		.4byte	.LASF9
+  78 006d 01       		.byte	0x1
+  79 006e 4F       		.byte	0x4f
+  80 006f 19       		.byte	0x19
+  81 0070 74000000 		.4byte	0x74
+  82 0074 03       		.uleb128 0x3
+  83 0075 04       		.byte	0x4
+  84 0076 07       		.byte	0x7
+  85 0077 DD010000 		.4byte	.LASF10
+  86 007b 03       		.uleb128 0x3
+  87 007c 08       		.byte	0x8
+  88 007d 07       		.byte	0x7
+  89 007e 99010000 		.4byte	.LASF11
+  90 0082 04       		.uleb128 0x4
+  91 0083 D4010000 		.4byte	.LASF12
+  92 0087 02       		.byte	0x2
+  93 0088 24       		.byte	0x24
+  94 0089 14       		.byte	0x14
+  95 008a 4E000000 		.4byte	0x4e
+  96 008e 04       		.uleb128 0x4
+  97 008f B0010000 		.4byte	.LASF13
+  98 0093 02       		.byte	0x2
+  99 0094 30       		.byte	0x30
+ 100 0095 14       		.byte	0x14
+ 101 0096 68000000 		.4byte	0x68
+ 102 009a 05       		.uleb128 0x5
+ 103 009b 8E000000 		.4byte	0x8e
+ 104 009f 03       		.uleb128 0x3
+ 105 00a0 01       		.byte	0x1
+ 106 00a1 08       		.byte	0x8
+ 107 00a2 3C020000 		.4byte	.LASF14
+ 108 00a6 06       		.uleb128 0x6
+ 109 00a7 A0       		.byte	0xa0
+ 110 00a8 03       		.byte	0x3
+ 111 00a9 9902     		.2byte	0x299
+ 112 00ab 09       		.byte	0x9
+ 113 00ac E0020000 		.4byte	0x2e0
+ 114 00b0 07       		.uleb128 0x7
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 3
+
+
+ 115 00b1 435200   		.ascii	"CR\000"
+ 116 00b4 03       		.byte	0x3
+ 117 00b5 9B02     		.2byte	0x29b
+ 118 00b7 11       		.byte	0x11
+ 119 00b8 9A000000 		.4byte	0x9a
+ 120 00bc 00       		.byte	0
+ 121 00bd 08       		.uleb128 0x8
+ 122 00be 31020000 		.4byte	.LASF15
+ 123 00c2 03       		.byte	0x3
+ 124 00c3 9C02     		.2byte	0x29c
+ 125 00c5 11       		.byte	0x11
+ 126 00c6 9A000000 		.4byte	0x9a
+ 127 00ca 04       		.byte	0x4
+ 128 00cb 08       		.uleb128 0x8
+ 129 00cc CE000000 		.4byte	.LASF16
+ 130 00d0 03       		.byte	0x3
+ 131 00d1 9D02     		.2byte	0x29d
+ 132 00d3 11       		.byte	0x11
+ 133 00d4 9A000000 		.4byte	0x9a
+ 134 00d8 08       		.byte	0x8
+ 135 00d9 08       		.uleb128 0x8
+ 136 00da 77010000 		.4byte	.LASF17
+ 137 00de 03       		.byte	0x3
+ 138 00df 9E02     		.2byte	0x29e
+ 139 00e1 11       		.byte	0x11
+ 140 00e2 9A000000 		.4byte	0x9a
+ 141 00e6 0C       		.byte	0xc
+ 142 00e7 08       		.uleb128 0x8
+ 143 00e8 78020000 		.4byte	.LASF18
+ 144 00ec 03       		.byte	0x3
+ 145 00ed 9F02     		.2byte	0x29f
+ 146 00ef 11       		.byte	0x11
+ 147 00f0 8E000000 		.4byte	0x8e
+ 148 00f4 10       		.byte	0x10
+ 149 00f5 08       		.uleb128 0x8
+ 150 00f6 82020000 		.4byte	.LASF19
+ 151 00fa 03       		.byte	0x3
+ 152 00fb A002     		.2byte	0x2a0
+ 153 00fd 11       		.byte	0x11
+ 154 00fe 8E000000 		.4byte	0x8e
+ 155 0102 14       		.byte	0x14
+ 156 0103 08       		.uleb128 0x8
+ 157 0104 D3000000 		.4byte	.LASF20
+ 158 0108 03       		.byte	0x3
+ 159 0109 A102     		.2byte	0x2a1
+ 160 010b 11       		.byte	0x11
+ 161 010c 9A000000 		.4byte	0x9a
+ 162 0110 18       		.byte	0x18
+ 163 0111 08       		.uleb128 0x8
+ 164 0112 DC020000 		.4byte	.LASF21
+ 165 0116 03       		.byte	0x3
+ 166 0117 A202     		.2byte	0x2a2
+ 167 0119 11       		.byte	0x11
+ 168 011a 9A000000 		.4byte	0x9a
+ 169 011e 1C       		.byte	0x1c
+ 170 011f 08       		.uleb128 0x8
+ 171 0120 9B000000 		.4byte	.LASF22
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 4
+
+
+ 172 0124 03       		.byte	0x3
+ 173 0125 A302     		.2byte	0x2a3
+ 174 0127 11       		.byte	0x11
+ 175 0128 9A000000 		.4byte	0x9a
+ 176 012c 20       		.byte	0x20
+ 177 012d 08       		.uleb128 0x8
+ 178 012e 8C020000 		.4byte	.LASF23
+ 179 0132 03       		.byte	0x3
+ 180 0133 A402     		.2byte	0x2a4
+ 181 0135 11       		.byte	0x11
+ 182 0136 8E000000 		.4byte	0x8e
+ 183 013a 24       		.byte	0x24
+ 184 013b 08       		.uleb128 0x8
+ 185 013c BE000000 		.4byte	.LASF24
+ 186 0140 03       		.byte	0x3
+ 187 0141 A502     		.2byte	0x2a5
+ 188 0143 11       		.byte	0x11
+ 189 0144 9A000000 		.4byte	0x9a
+ 190 0148 28       		.byte	0x28
+ 191 0149 08       		.uleb128 0x8
+ 192 014a CB010000 		.4byte	.LASF25
+ 193 014e 03       		.byte	0x3
+ 194 014f A602     		.2byte	0x2a6
+ 195 0151 11       		.byte	0x11
+ 196 0152 9A000000 		.4byte	0x9a
+ 197 0156 2C       		.byte	0x2c
+ 198 0157 08       		.uleb128 0x8
+ 199 0158 2A030000 		.4byte	.LASF26
+ 200 015c 03       		.byte	0x3
+ 201 015d A702     		.2byte	0x2a7
+ 202 015f 11       		.byte	0x11
+ 203 0160 9A000000 		.4byte	0x9a
+ 204 0164 30       		.byte	0x30
+ 205 0165 08       		.uleb128 0x8
+ 206 0166 96020000 		.4byte	.LASF27
+ 207 016a 03       		.byte	0x3
+ 208 016b A802     		.2byte	0x2a8
+ 209 016d 11       		.byte	0x11
+ 210 016e 8E000000 		.4byte	0x8e
+ 211 0172 34       		.byte	0x34
+ 212 0173 08       		.uleb128 0x8
+ 213 0174 45000000 		.4byte	.LASF28
+ 214 0178 03       		.byte	0x3
+ 215 0179 A902     		.2byte	0x2a9
+ 216 017b 11       		.byte	0x11
+ 217 017c 9A000000 		.4byte	0x9a
+ 218 0180 38       		.byte	0x38
+ 219 0181 08       		.uleb128 0x8
+ 220 0182 4F000000 		.4byte	.LASF29
+ 221 0186 03       		.byte	0x3
+ 222 0187 AA02     		.2byte	0x2aa
+ 223 0189 11       		.byte	0x11
+ 224 018a 9A000000 		.4byte	0x9a
+ 225 018e 3C       		.byte	0x3c
+ 226 018f 08       		.uleb128 0x8
+ 227 0190 41010000 		.4byte	.LASF30
+ 228 0194 03       		.byte	0x3
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 5
+
+
+ 229 0195 AB02     		.2byte	0x2ab
+ 230 0197 11       		.byte	0x11
+ 231 0198 9A000000 		.4byte	0x9a
+ 232 019c 40       		.byte	0x40
+ 233 019d 08       		.uleb128 0x8
+ 234 019e A0020000 		.4byte	.LASF31
+ 235 01a2 03       		.byte	0x3
+ 236 01a3 AC02     		.2byte	0x2ac
+ 237 01a5 11       		.byte	0x11
+ 238 01a6 8E000000 		.4byte	0x8e
+ 239 01aa 44       		.byte	0x44
+ 240 01ab 08       		.uleb128 0x8
+ 241 01ac E1020000 		.4byte	.LASF32
+ 242 01b0 03       		.byte	0x3
+ 243 01b1 AD02     		.2byte	0x2ad
+ 244 01b3 11       		.byte	0x11
+ 245 01b4 9A000000 		.4byte	0x9a
+ 246 01b8 48       		.byte	0x48
+ 247 01b9 08       		.uleb128 0x8
+ 248 01ba 59000000 		.4byte	.LASF33
+ 249 01be 03       		.byte	0x3
+ 250 01bf AE02     		.2byte	0x2ae
+ 251 01c1 11       		.byte	0x11
+ 252 01c2 9A000000 		.4byte	0x9a
+ 253 01c6 4C       		.byte	0x4c
+ 254 01c7 08       		.uleb128 0x8
+ 255 01c8 DF000000 		.4byte	.LASF34
+ 256 01cc 03       		.byte	0x3
+ 257 01cd AF02     		.2byte	0x2af
+ 258 01cf 11       		.byte	0x11
+ 259 01d0 9A000000 		.4byte	0x9a
+ 260 01d4 50       		.byte	0x50
+ 261 01d5 08       		.uleb128 0x8
+ 262 01d6 AA020000 		.4byte	.LASF35
+ 263 01da 03       		.byte	0x3
+ 264 01db B002     		.2byte	0x2b0
+ 265 01dd 11       		.byte	0x11
+ 266 01de 8E000000 		.4byte	0x8e
+ 267 01e2 54       		.byte	0x54
+ 268 01e3 08       		.uleb128 0x8
+ 269 01e4 13020000 		.4byte	.LASF36
+ 270 01e8 03       		.byte	0x3
+ 271 01e9 B102     		.2byte	0x2b1
+ 272 01eb 11       		.byte	0x11
+ 273 01ec 9A000000 		.4byte	0x9a
+ 274 01f0 58       		.byte	0x58
+ 275 01f1 08       		.uleb128 0x8
+ 276 01f2 1C020000 		.4byte	.LASF37
+ 277 01f6 03       		.byte	0x3
+ 278 01f7 B202     		.2byte	0x2b2
+ 279 01f9 11       		.byte	0x11
+ 280 01fa 9A000000 		.4byte	0x9a
+ 281 01fe 5C       		.byte	0x5c
+ 282 01ff 08       		.uleb128 0x8
+ 283 0200 7F010000 		.4byte	.LASF38
+ 284 0204 03       		.byte	0x3
+ 285 0205 B302     		.2byte	0x2b3
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 6
+
+
+ 286 0207 11       		.byte	0x11
+ 287 0208 9A000000 		.4byte	0x9a
+ 288 020c 60       		.byte	0x60
+ 289 020d 08       		.uleb128 0x8
+ 290 020e B4020000 		.4byte	.LASF39
+ 291 0212 03       		.byte	0x3
+ 292 0213 B402     		.2byte	0x2b4
+ 293 0215 11       		.byte	0x11
+ 294 0216 8E000000 		.4byte	0x8e
+ 295 021a 64       		.byte	0x64
+ 296 021b 08       		.uleb128 0x8
+ 297 021c 20030000 		.4byte	.LASF40
+ 298 0220 03       		.byte	0x3
+ 299 0221 B502     		.2byte	0x2b5
+ 300 0223 11       		.byte	0x11
+ 301 0224 9A000000 		.4byte	0x9a
+ 302 0228 68       		.byte	0x68
+ 303 0229 08       		.uleb128 0x8
+ 304 022a 31010000 		.4byte	.LASF41
+ 305 022e 03       		.byte	0x3
+ 306 022f B602     		.2byte	0x2b6
+ 307 0231 11       		.byte	0x11
+ 308 0232 9A000000 		.4byte	0x9a
+ 309 0236 6C       		.byte	0x6c
+ 310 0237 08       		.uleb128 0x8
+ 311 0238 16030000 		.4byte	.LASF42
+ 312 023c 03       		.byte	0x3
+ 313 023d B702     		.2byte	0x2b7
+ 314 023f 11       		.byte	0x11
+ 315 0240 9A000000 		.4byte	0x9a
+ 316 0244 70       		.byte	0x70
+ 317 0245 08       		.uleb128 0x8
+ 318 0246 BE020000 		.4byte	.LASF43
+ 319 024a 03       		.byte	0x3
+ 320 024b B802     		.2byte	0x2b8
+ 321 024d 11       		.byte	0x11
+ 322 024e 8E000000 		.4byte	0x8e
+ 323 0252 74       		.byte	0x74
+ 324 0253 08       		.uleb128 0x8
+ 325 0254 B9010000 		.4byte	.LASF44
+ 326 0258 03       		.byte	0x3
+ 327 0259 B902     		.2byte	0x2b9
+ 328 025b 11       		.byte	0x11
+ 329 025c 9A000000 		.4byte	0x9a
+ 330 0260 78       		.byte	0x78
+ 331 0261 08       		.uleb128 0x8
+ 332 0262 0A010000 		.4byte	.LASF45
+ 333 0266 03       		.byte	0x3
+ 334 0267 BA02     		.2byte	0x2ba
+ 335 0269 11       		.byte	0x11
+ 336 026a 9A000000 		.4byte	0x9a
+ 337 026e 7C       		.byte	0x7c
+ 338 026f 08       		.uleb128 0x8
+ 339 0270 41020000 		.4byte	.LASF46
+ 340 0274 03       		.byte	0x3
+ 341 0275 BB02     		.2byte	0x2bb
+ 342 0277 11       		.byte	0x11
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 7
+
+
+ 343 0278 9A000000 		.4byte	0x9a
+ 344 027c 80       		.byte	0x80
+ 345 027d 08       		.uleb128 0x8
+ 346 027e C8020000 		.4byte	.LASF47
+ 347 0282 03       		.byte	0x3
+ 348 0283 BC02     		.2byte	0x2bc
+ 349 0285 11       		.byte	0x11
+ 350 0286 8E000000 		.4byte	0x8e
+ 351 028a 84       		.byte	0x84
+ 352 028b 08       		.uleb128 0x8
+ 353 028c 8A000000 		.4byte	.LASF48
+ 354 0290 03       		.byte	0x3
+ 355 0291 BD02     		.2byte	0x2bd
+ 356 0293 11       		.byte	0x11
+ 357 0294 9A000000 		.4byte	0x9a
+ 358 0298 88       		.byte	0x88
+ 359 0299 08       		.uleb128 0x8
+ 360 029a D2020000 		.4byte	.LASF49
+ 361 029e 03       		.byte	0x3
+ 362 029f BE02     		.2byte	0x2be
+ 363 02a1 11       		.byte	0x11
+ 364 02a2 8E000000 		.4byte	0x8e
+ 365 02a6 8C       		.byte	0x8c
+ 366 02a7 08       		.uleb128 0x8
+ 367 02a8 85000000 		.4byte	.LASF50
+ 368 02ac 03       		.byte	0x3
+ 369 02ad BF02     		.2byte	0x2bf
+ 370 02af 11       		.byte	0x11
+ 371 02b0 9A000000 		.4byte	0x9a
+ 372 02b4 90       		.byte	0x90
+ 373 02b5 07       		.uleb128 0x7
+ 374 02b6 43535200 		.ascii	"CSR\000"
+ 375 02ba 03       		.byte	0x3
+ 376 02bb C002     		.2byte	0x2c0
+ 377 02bd 11       		.byte	0x11
+ 378 02be 9A000000 		.4byte	0x9a
+ 379 02c2 94       		.byte	0x94
+ 380 02c3 08       		.uleb128 0x8
+ 381 02c4 87010000 		.4byte	.LASF51
+ 382 02c8 03       		.byte	0x3
+ 383 02c9 C102     		.2byte	0x2c1
+ 384 02cb 11       		.byte	0x11
+ 385 02cc 9A000000 		.4byte	0x9a
+ 386 02d0 98       		.byte	0x98
+ 387 02d1 08       		.uleb128 0x8
+ 388 02d2 2A020000 		.4byte	.LASF52
+ 389 02d6 03       		.byte	0x3
+ 390 02d7 C202     		.2byte	0x2c2
+ 391 02d9 11       		.byte	0x11
+ 392 02da 9A000000 		.4byte	0x9a
+ 393 02de 9C       		.byte	0x9c
+ 394 02df 00       		.byte	0
+ 395 02e0 09       		.uleb128 0x9
+ 396 02e1 25010000 		.4byte	.LASF53
+ 397 02e5 03       		.byte	0x3
+ 398 02e6 C302     		.2byte	0x2c3
+ 399 02e8 03       		.byte	0x3
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 8
+
+
+ 400 02e9 A6000000 		.4byte	0xa6
+ 401 02ed 03       		.uleb128 0x3
+ 402 02ee 01       		.byte	0x1
+ 403 02ef 02       		.byte	0x2
+ 404 02f0 6B020000 		.4byte	.LASF54
+ 405 02f4 0A       		.uleb128 0xa
+ 406 02f5 04       		.byte	0x4
+ 407 02f6 04       		.byte	0x4
+ 408 02f7 5B       		.byte	0x5b
+ 409 02f8 05       		.byte	0x5
+ 410 02f9 18030000 		.4byte	0x318
+ 411 02fd 0B       		.uleb128 0xb
+ 412 02fe 73657400 		.ascii	"set\000"
+ 413 0302 04       		.byte	0x4
+ 414 0303 5C       		.byte	0x5c
+ 415 0304 19       		.byte	0x19
+ 416 0305 82000000 		.4byte	0x82
+ 417 0309 00       		.byte	0
+ 418 030a 0C       		.uleb128 0xc
+ 419 030b 4A010000 		.4byte	.LASF55
+ 420 030f 04       		.byte	0x4
+ 421 0310 5D       		.byte	0x5d
+ 422 0311 19       		.byte	0x19
+ 423 0312 82000000 		.4byte	0x82
+ 424 0316 02       		.byte	0x2
+ 425 0317 00       		.byte	0
+ 426 0318 0D       		.uleb128 0xd
+ 427 0319 04       		.byte	0x4
+ 428 031a 04       		.byte	0x4
+ 429 031b 59       		.byte	0x59
+ 430 031c 0C       		.byte	0xc
+ 431 031d 36030000 		.4byte	0x336
+ 432 0321 0E       		.uleb128 0xe
+ 433 0322 5700     		.ascii	"W\000"
+ 434 0324 04       		.byte	0x4
+ 435 0325 5A       		.byte	0x5a
+ 436 0326 19       		.byte	0x19
+ 437 0327 8E000000 		.4byte	0x8e
+ 438 032b 0E       		.uleb128 0xe
+ 439 032c 4800     		.ascii	"H\000"
+ 440 032e 04       		.byte	0x4
+ 441 032f 5E       		.byte	0x5e
+ 442 0330 07       		.byte	0x7
+ 443 0331 F4020000 		.4byte	0x2f4
+ 444 0335 00       		.byte	0
+ 445 0336 05       		.uleb128 0x5
+ 446 0337 18030000 		.4byte	0x318
+ 447 033b 0A       		.uleb128 0xa
+ 448 033c 28       		.byte	0x28
+ 449 033d 04       		.byte	0x4
+ 450 033e 51       		.byte	0x51
+ 451 033f 09       		.byte	0x9
+ 452 0340 C7030000 		.4byte	0x3c7
+ 453 0344 0C       		.uleb128 0xc
+ 454 0345 3B010000 		.4byte	.LASF56
+ 455 0349 04       		.byte	0x4
+ 456 034a 53       		.byte	0x53
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 9
+
+
+ 457 034b 19       		.byte	0x19
+ 458 034c 9A000000 		.4byte	0x9a
+ 459 0350 00       		.byte	0
+ 460 0351 0C       		.uleb128 0xc
+ 461 0352 D8000000 		.4byte	.LASF57
+ 462 0356 04       		.byte	0x4
+ 463 0357 54       		.byte	0x54
+ 464 0358 19       		.byte	0x19
+ 465 0359 9A000000 		.4byte	0x9a
+ 466 035d 04       		.byte	0x4
+ 467 035e 0C       		.uleb128 0xc
+ 468 035f 07000000 		.4byte	.LASF58
+ 469 0363 04       		.byte	0x4
+ 470 0364 55       		.byte	0x55
+ 471 0365 19       		.byte	0x19
+ 472 0366 9A000000 		.4byte	0x9a
+ 473 036a 08       		.byte	0x8
+ 474 036b 0C       		.uleb128 0xc
+ 475 036c FC000000 		.4byte	.LASF59
+ 476 0370 04       		.byte	0x4
+ 477 0371 56       		.byte	0x56
+ 478 0372 19       		.byte	0x19
+ 479 0373 9A000000 		.4byte	0x9a
+ 480 0377 0C       		.byte	0xc
+ 481 0378 0B       		.uleb128 0xb
+ 482 0379 49445200 		.ascii	"IDR\000"
+ 483 037d 04       		.byte	0x4
+ 484 037e 57       		.byte	0x57
+ 485 037f 19       		.byte	0x19
+ 486 0380 9A000000 		.4byte	0x9a
+ 487 0384 10       		.byte	0x10
+ 488 0385 0B       		.uleb128 0xb
+ 489 0386 4F445200 		.ascii	"ODR\000"
+ 490 038a 04       		.byte	0x4
+ 491 038b 58       		.byte	0x58
+ 492 038c 19       		.byte	0x19
+ 493 038d 9A000000 		.4byte	0x9a
+ 494 0391 14       		.byte	0x14
+ 495 0392 0C       		.uleb128 0xc
+ 496 0393 B9000000 		.4byte	.LASF60
+ 497 0397 04       		.byte	0x4
+ 498 0398 5F       		.byte	0x5f
+ 499 0399 05       		.byte	0x5
+ 500 039a 36030000 		.4byte	0x336
+ 501 039e 18       		.byte	0x18
+ 502 039f 0C       		.uleb128 0xc
+ 503 03a0 57010000 		.4byte	.LASF61
+ 504 03a4 04       		.byte	0x4
+ 505 03a5 60       		.byte	0x60
+ 506 03a6 19       		.byte	0x19
+ 507 03a7 9A000000 		.4byte	0x9a
+ 508 03ab 1C       		.byte	0x1c
+ 509 03ac 0C       		.uleb128 0xc
+ 510 03ad 25020000 		.4byte	.LASF62
+ 511 03b1 04       		.byte	0x4
+ 512 03b2 61       		.byte	0x61
+ 513 03b3 19       		.byte	0x19
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 10
+
+
+ 514 03b4 9A000000 		.4byte	0x9a
+ 515 03b8 20       		.byte	0x20
+ 516 03b9 0C       		.uleb128 0xc
+ 517 03ba 37020000 		.4byte	.LASF63
+ 518 03be 04       		.byte	0x4
+ 519 03bf 62       		.byte	0x62
+ 520 03c0 19       		.byte	0x19
+ 521 03c1 9A000000 		.4byte	0x9a
+ 522 03c5 24       		.byte	0x24
+ 523 03c6 00       		.byte	0
+ 524 03c7 04       		.uleb128 0x4
+ 525 03c8 72000000 		.4byte	.LASF64
+ 526 03cc 04       		.byte	0x4
+ 527 03cd 63       		.byte	0x63
+ 528 03ce 03       		.byte	0x3
+ 529 03cf 3B030000 		.4byte	0x33b
+ 530 03d3 0F       		.uleb128 0xf
+ 531 03d4 04       		.byte	0x4
+ 532 03d5 C7030000 		.4byte	0x3c7
+ 533 03d9 0A       		.uleb128 0xa
+ 534 03da 1C       		.byte	0x1c
+ 535 03db 05       		.byte	0x5
+ 536 03dc 28       		.byte	0x28
+ 537 03dd 09       		.byte	0x9
+ 538 03de 3E040000 		.4byte	0x43e
+ 539 03e2 0C       		.uleb128 0xc
+ 540 03e3 10030000 		.4byte	.LASF65
+ 541 03e7 05       		.byte	0x5
+ 542 03e8 29       		.byte	0x29
+ 543 03e9 19       		.byte	0x19
+ 544 03ea 8E000000 		.4byte	0x8e
+ 545 03ee 00       		.byte	0
+ 546 03ef 0C       		.uleb128 0xc
+ 547 03f0 C4010000 		.4byte	.LASF66
+ 548 03f4 05       		.byte	0x5
+ 549 03f5 2A       		.byte	0x2a
+ 550 03f6 19       		.byte	0x19
+ 551 03f7 8E000000 		.4byte	0x8e
+ 552 03fb 04       		.byte	0x4
+ 553 03fc 0C       		.uleb128 0xc
+ 554 03fd 02010000 		.4byte	.LASF67
+ 555 0401 05       		.byte	0x5
+ 556 0402 2B       		.byte	0x2b
+ 557 0403 19       		.byte	0x19
+ 558 0404 8E000000 		.4byte	0x8e
+ 559 0408 08       		.byte	0x8
+ 560 0409 0C       		.uleb128 0xc
+ 561 040a F3020000 		.4byte	.LASF68
+ 562 040e 05       		.byte	0x5
+ 563 040f 2C       		.byte	0x2c
+ 564 0410 19       		.byte	0x19
+ 565 0411 8E000000 		.4byte	0x8e
+ 566 0415 0C       		.byte	0xc
+ 567 0416 0B       		.uleb128 0xb
+ 568 0417 6F647200 		.ascii	"odr\000"
+ 569 041b 05       		.byte	0x5
+ 570 041c 2D       		.byte	0x2d
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 11
+
+
+ 571 041d 19       		.byte	0x19
+ 572 041e 8E000000 		.4byte	0x8e
+ 573 0422 10       		.byte	0x10
+ 574 0423 0C       		.uleb128 0xc
+ 575 0424 0B030000 		.4byte	.LASF69
+ 576 0428 05       		.byte	0x5
+ 577 0429 2E       		.byte	0x2e
+ 578 042a 19       		.byte	0x19
+ 579 042b 8E000000 		.4byte	0x8e
+ 580 042f 14       		.byte	0x14
+ 581 0430 0C       		.uleb128 0xc
+ 582 0431 F9020000 		.4byte	.LASF70
+ 583 0435 05       		.byte	0x5
+ 584 0436 2F       		.byte	0x2f
+ 585 0437 19       		.byte	0x19
+ 586 0438 8E000000 		.4byte	0x8e
+ 587 043c 18       		.byte	0x18
+ 588 043d 00       		.byte	0
+ 589 043e 04       		.uleb128 0x4
+ 590 043f FE020000 		.4byte	.LASF71
+ 591 0443 05       		.byte	0x5
+ 592 0444 30       		.byte	0x30
+ 593 0445 03       		.byte	0x3
+ 594 0446 D9030000 		.4byte	0x3d9
+ 595 044a 10       		.uleb128 0x10
+ 596 044b 3E040000 		.4byte	0x43e
+ 597 044f 0A       		.uleb128 0xa
+ 598 0450 C4       		.byte	0xc4
+ 599 0451 05       		.byte	0x5
+ 600 0452 35       		.byte	0x35
+ 601 0453 09       		.byte	0x9
+ 602 0454 B4040000 		.4byte	0x4b4
+ 603 0458 0C       		.uleb128 0xc
+ 604 0459 E7000000 		.4byte	.LASF72
+ 605 045d 05       		.byte	0x5
+ 606 045e 37       		.byte	0x37
+ 607 045f 19       		.byte	0x19
+ 608 0460 3E040000 		.4byte	0x43e
+ 609 0464 00       		.byte	0
+ 610 0465 0C       		.uleb128 0xc
+ 611 0466 6E030000 		.4byte	.LASF73
+ 612 046a 05       		.byte	0x5
+ 613 046b 3A       		.byte	0x3a
+ 614 046c 19       		.byte	0x19
+ 615 046d 3E040000 		.4byte	0x43e
+ 616 0471 1C       		.byte	0x1c
+ 617 0472 0C       		.uleb128 0xc
+ 618 0473 00000000 		.4byte	.LASF74
+ 619 0477 05       		.byte	0x5
+ 620 0478 3D       		.byte	0x3d
+ 621 0479 19       		.byte	0x19
+ 622 047a 3E040000 		.4byte	0x43e
+ 623 047e 38       		.byte	0x38
+ 624 047f 0C       		.uleb128 0xc
+ 625 0480 1E010000 		.4byte	.LASF75
+ 626 0484 05       		.byte	0x5
+ 627 0485 40       		.byte	0x40
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 12
+
+
+ 628 0486 19       		.byte	0x19
+ 629 0487 3E040000 		.4byte	0x43e
+ 630 048b 54       		.byte	0x54
+ 631 048c 0C       		.uleb128 0xc
+ 632 048d 71020000 		.4byte	.LASF76
+ 633 0491 05       		.byte	0x5
+ 634 0492 43       		.byte	0x43
+ 635 0493 19       		.byte	0x19
+ 636 0494 3E040000 		.4byte	0x43e
+ 637 0498 70       		.byte	0x70
+ 638 0499 0C       		.uleb128 0xc
+ 639 049a 61000000 		.4byte	.LASF77
+ 640 049e 05       		.byte	0x5
+ 641 049f 46       		.byte	0x46
+ 642 04a0 19       		.byte	0x19
+ 643 04a1 3E040000 		.4byte	0x43e
+ 644 04a5 8C       		.byte	0x8c
+ 645 04a6 0C       		.uleb128 0xc
+ 646 04a7 50010000 		.4byte	.LASF78
+ 647 04ab 05       		.byte	0x5
+ 648 04ac 49       		.byte	0x49
+ 649 04ad 19       		.byte	0x19
+ 650 04ae 3E040000 		.4byte	0x43e
+ 651 04b2 A8       		.byte	0xa8
+ 652 04b3 00       		.byte	0
+ 653 04b4 04       		.uleb128 0x4
+ 654 04b5 A0000000 		.4byte	.LASF79
+ 655 04b9 05       		.byte	0x5
+ 656 04ba 57       		.byte	0x57
+ 657 04bb 03       		.byte	0x3
+ 658 04bc 4F040000 		.4byte	0x44f
+ 659 04c0 10       		.uleb128 0x10
+ 660 04c1 B4040000 		.4byte	0x4b4
+ 661 04c5 11       		.uleb128 0x11
+ 662 04c6 FF010000 		.4byte	.LASF87
+ 663 04ca 05       		.byte	0x5
+ 664 04cb 5C       		.byte	0x5c
+ 665 04cc 1C       		.byte	0x1c
+ 666 04cd C0040000 		.4byte	0x4c0
+ 667 04d1 12       		.uleb128 0x12
+ 668 04d2 82030000 		.4byte	.LASF80
+ 669 04d6 05       		.byte	0x5
+ 670 04d7 0801     		.2byte	0x108
+ 671 04d9 06       		.byte	0x6
+ 672 04da 13       		.uleb128 0x13
+ 673 04db 4B020000 		.4byte	.LASF81
+ 674 04df 05       		.byte	0x5
+ 675 04e0 D2       		.byte	0xd2
+ 676 04e1 06       		.byte	0x6
+ 677 04e2 14       		.uleb128 0x14
+ 678 04e3 EF010000 		.4byte	.LASF88
+ 679 04e7 05       		.byte	0x5
+ 680 04e8 9A       		.byte	0x9a
+ 681 04e9 0D       		.byte	0xd
+ 682 04ea 15       		.uleb128 0x15
+ 683 04eb E9020000 		.4byte	.LASF89
+ 684 04ef 05       		.byte	0x5
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 13
+
+
+ 685 04f0 8F       		.byte	0x8f
+ 686 04f1 0D       		.byte	0xd
+ 687 04f2 0F050000 		.4byte	0x50f
+ 688 04f6 16       		.uleb128 0x16
+ 689 04f7 7F000000 		.4byte	.LASF82
+ 690 04fb 05       		.byte	0x5
+ 691 04fc 8F       		.byte	0x8f
+ 692 04fd 25       		.byte	0x25
+ 693 04fe D3030000 		.4byte	0x3d3
+ 694 0502 16       		.uleb128 0x16
+ 695 0503 C7000000 		.4byte	.LASF83
+ 696 0507 05       		.byte	0x5
+ 697 0508 8F       		.byte	0x8f
+ 698 0509 40       		.byte	0x40
+ 699 050a 0F050000 		.4byte	0x50f
+ 700 050e 00       		.byte	0
+ 701 050f 0F       		.uleb128 0xf
+ 702 0510 04       		.byte	0x4
+ 703 0511 4A040000 		.4byte	0x44a
+ 704 0515 00       		.byte	0
+ 705              		.section	.gnu.debuglto_.debug_abbrev,"e",%progbits
+ 706              	.Ldebug_abbrev0:
+ 707 0000 01       		.uleb128 0x1
+ 708 0001 11       		.uleb128 0x11
+ 709 0002 01       		.byte	0x1
+ 710 0003 25       		.uleb128 0x25
+ 711 0004 0E       		.uleb128 0xe
+ 712 0005 13       		.uleb128 0x13
+ 713 0006 0B       		.uleb128 0xb
+ 714 0007 03       		.uleb128 0x3
+ 715 0008 0E       		.uleb128 0xe
+ 716 0009 1B       		.uleb128 0x1b
+ 717 000a 0E       		.uleb128 0xe
+ 718 000b 10       		.uleb128 0x10
+ 719 000c 17       		.uleb128 0x17
+ 720 000d 00       		.byte	0
+ 721 000e 00       		.byte	0
+ 722 000f 02       		.uleb128 0x2
+ 723 0010 24       		.uleb128 0x24
+ 724 0011 00       		.byte	0
+ 725 0012 0B       		.uleb128 0xb
+ 726 0013 0B       		.uleb128 0xb
+ 727 0014 3E       		.uleb128 0x3e
+ 728 0015 0B       		.uleb128 0xb
+ 729 0016 03       		.uleb128 0x3
+ 730 0017 08       		.uleb128 0x8
+ 731 0018 00       		.byte	0
+ 732 0019 00       		.byte	0
+ 733 001a 03       		.uleb128 0x3
+ 734 001b 24       		.uleb128 0x24
+ 735 001c 00       		.byte	0
+ 736 001d 0B       		.uleb128 0xb
+ 737 001e 0B       		.uleb128 0xb
+ 738 001f 3E       		.uleb128 0x3e
+ 739 0020 0B       		.uleb128 0xb
+ 740 0021 03       		.uleb128 0x3
+ 741 0022 0E       		.uleb128 0xe
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 14
+
+
+ 742 0023 00       		.byte	0
+ 743 0024 00       		.byte	0
+ 744 0025 04       		.uleb128 0x4
+ 745 0026 16       		.uleb128 0x16
+ 746 0027 00       		.byte	0
+ 747 0028 03       		.uleb128 0x3
+ 748 0029 0E       		.uleb128 0xe
+ 749 002a 3A       		.uleb128 0x3a
+ 750 002b 0B       		.uleb128 0xb
+ 751 002c 3B       		.uleb128 0x3b
+ 752 002d 0B       		.uleb128 0xb
+ 753 002e 39       		.uleb128 0x39
+ 754 002f 0B       		.uleb128 0xb
+ 755 0030 49       		.uleb128 0x49
+ 756 0031 13       		.uleb128 0x13
+ 757 0032 00       		.byte	0
+ 758 0033 00       		.byte	0
+ 759 0034 05       		.uleb128 0x5
+ 760 0035 35       		.uleb128 0x35
+ 761 0036 00       		.byte	0
+ 762 0037 49       		.uleb128 0x49
+ 763 0038 13       		.uleb128 0x13
+ 764 0039 00       		.byte	0
+ 765 003a 00       		.byte	0
+ 766 003b 06       		.uleb128 0x6
+ 767 003c 13       		.uleb128 0x13
+ 768 003d 01       		.byte	0x1
+ 769 003e 0B       		.uleb128 0xb
+ 770 003f 0B       		.uleb128 0xb
+ 771 0040 3A       		.uleb128 0x3a
+ 772 0041 0B       		.uleb128 0xb
+ 773 0042 3B       		.uleb128 0x3b
+ 774 0043 05       		.uleb128 0x5
+ 775 0044 39       		.uleb128 0x39
+ 776 0045 0B       		.uleb128 0xb
+ 777 0046 01       		.uleb128 0x1
+ 778 0047 13       		.uleb128 0x13
+ 779 0048 00       		.byte	0
+ 780 0049 00       		.byte	0
+ 781 004a 07       		.uleb128 0x7
+ 782 004b 0D       		.uleb128 0xd
+ 783 004c 00       		.byte	0
+ 784 004d 03       		.uleb128 0x3
+ 785 004e 08       		.uleb128 0x8
+ 786 004f 3A       		.uleb128 0x3a
+ 787 0050 0B       		.uleb128 0xb
+ 788 0051 3B       		.uleb128 0x3b
+ 789 0052 05       		.uleb128 0x5
+ 790 0053 39       		.uleb128 0x39
+ 791 0054 0B       		.uleb128 0xb
+ 792 0055 49       		.uleb128 0x49
+ 793 0056 13       		.uleb128 0x13
+ 794 0057 38       		.uleb128 0x38
+ 795 0058 0B       		.uleb128 0xb
+ 796 0059 00       		.byte	0
+ 797 005a 00       		.byte	0
+ 798 005b 08       		.uleb128 0x8
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 15
+
+
+ 799 005c 0D       		.uleb128 0xd
+ 800 005d 00       		.byte	0
+ 801 005e 03       		.uleb128 0x3
+ 802 005f 0E       		.uleb128 0xe
+ 803 0060 3A       		.uleb128 0x3a
+ 804 0061 0B       		.uleb128 0xb
+ 805 0062 3B       		.uleb128 0x3b
+ 806 0063 05       		.uleb128 0x5
+ 807 0064 39       		.uleb128 0x39
+ 808 0065 0B       		.uleb128 0xb
+ 809 0066 49       		.uleb128 0x49
+ 810 0067 13       		.uleb128 0x13
+ 811 0068 38       		.uleb128 0x38
+ 812 0069 0B       		.uleb128 0xb
+ 813 006a 00       		.byte	0
+ 814 006b 00       		.byte	0
+ 815 006c 09       		.uleb128 0x9
+ 816 006d 16       		.uleb128 0x16
+ 817 006e 00       		.byte	0
+ 818 006f 03       		.uleb128 0x3
+ 819 0070 0E       		.uleb128 0xe
+ 820 0071 3A       		.uleb128 0x3a
+ 821 0072 0B       		.uleb128 0xb
+ 822 0073 3B       		.uleb128 0x3b
+ 823 0074 05       		.uleb128 0x5
+ 824 0075 39       		.uleb128 0x39
+ 825 0076 0B       		.uleb128 0xb
+ 826 0077 49       		.uleb128 0x49
+ 827 0078 13       		.uleb128 0x13
+ 828 0079 00       		.byte	0
+ 829 007a 00       		.byte	0
+ 830 007b 0A       		.uleb128 0xa
+ 831 007c 13       		.uleb128 0x13
+ 832 007d 01       		.byte	0x1
+ 833 007e 0B       		.uleb128 0xb
+ 834 007f 0B       		.uleb128 0xb
+ 835 0080 3A       		.uleb128 0x3a
+ 836 0081 0B       		.uleb128 0xb
+ 837 0082 3B       		.uleb128 0x3b
+ 838 0083 0B       		.uleb128 0xb
+ 839 0084 39       		.uleb128 0x39
+ 840 0085 0B       		.uleb128 0xb
+ 841 0086 01       		.uleb128 0x1
+ 842 0087 13       		.uleb128 0x13
+ 843 0088 00       		.byte	0
+ 844 0089 00       		.byte	0
+ 845 008a 0B       		.uleb128 0xb
+ 846 008b 0D       		.uleb128 0xd
+ 847 008c 00       		.byte	0
+ 848 008d 03       		.uleb128 0x3
+ 849 008e 08       		.uleb128 0x8
+ 850 008f 3A       		.uleb128 0x3a
+ 851 0090 0B       		.uleb128 0xb
+ 852 0091 3B       		.uleb128 0x3b
+ 853 0092 0B       		.uleb128 0xb
+ 854 0093 39       		.uleb128 0x39
+ 855 0094 0B       		.uleb128 0xb
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 16
+
+
+ 856 0095 49       		.uleb128 0x49
+ 857 0096 13       		.uleb128 0x13
+ 858 0097 38       		.uleb128 0x38
+ 859 0098 0B       		.uleb128 0xb
+ 860 0099 00       		.byte	0
+ 861 009a 00       		.byte	0
+ 862 009b 0C       		.uleb128 0xc
+ 863 009c 0D       		.uleb128 0xd
+ 864 009d 00       		.byte	0
+ 865 009e 03       		.uleb128 0x3
+ 866 009f 0E       		.uleb128 0xe
+ 867 00a0 3A       		.uleb128 0x3a
+ 868 00a1 0B       		.uleb128 0xb
+ 869 00a2 3B       		.uleb128 0x3b
+ 870 00a3 0B       		.uleb128 0xb
+ 871 00a4 39       		.uleb128 0x39
+ 872 00a5 0B       		.uleb128 0xb
+ 873 00a6 49       		.uleb128 0x49
+ 874 00a7 13       		.uleb128 0x13
+ 875 00a8 38       		.uleb128 0x38
+ 876 00a9 0B       		.uleb128 0xb
+ 877 00aa 00       		.byte	0
+ 878 00ab 00       		.byte	0
+ 879 00ac 0D       		.uleb128 0xd
+ 880 00ad 17       		.uleb128 0x17
+ 881 00ae 01       		.byte	0x1
+ 882 00af 0B       		.uleb128 0xb
+ 883 00b0 0B       		.uleb128 0xb
+ 884 00b1 3A       		.uleb128 0x3a
+ 885 00b2 0B       		.uleb128 0xb
+ 886 00b3 3B       		.uleb128 0x3b
+ 887 00b4 0B       		.uleb128 0xb
+ 888 00b5 39       		.uleb128 0x39
+ 889 00b6 0B       		.uleb128 0xb
+ 890 00b7 01       		.uleb128 0x1
+ 891 00b8 13       		.uleb128 0x13
+ 892 00b9 00       		.byte	0
+ 893 00ba 00       		.byte	0
+ 894 00bb 0E       		.uleb128 0xe
+ 895 00bc 0D       		.uleb128 0xd
+ 896 00bd 00       		.byte	0
+ 897 00be 03       		.uleb128 0x3
+ 898 00bf 08       		.uleb128 0x8
+ 899 00c0 3A       		.uleb128 0x3a
+ 900 00c1 0B       		.uleb128 0xb
+ 901 00c2 3B       		.uleb128 0x3b
+ 902 00c3 0B       		.uleb128 0xb
+ 903 00c4 39       		.uleb128 0x39
+ 904 00c5 0B       		.uleb128 0xb
+ 905 00c6 49       		.uleb128 0x49
+ 906 00c7 13       		.uleb128 0x13
+ 907 00c8 00       		.byte	0
+ 908 00c9 00       		.byte	0
+ 909 00ca 0F       		.uleb128 0xf
+ 910 00cb 0F       		.uleb128 0xf
+ 911 00cc 00       		.byte	0
+ 912 00cd 0B       		.uleb128 0xb
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 17
+
+
+ 913 00ce 0B       		.uleb128 0xb
+ 914 00cf 49       		.uleb128 0x49
+ 915 00d0 13       		.uleb128 0x13
+ 916 00d1 00       		.byte	0
+ 917 00d2 00       		.byte	0
+ 918 00d3 10       		.uleb128 0x10
+ 919 00d4 26       		.uleb128 0x26
+ 920 00d5 00       		.byte	0
+ 921 00d6 49       		.uleb128 0x49
+ 922 00d7 13       		.uleb128 0x13
+ 923 00d8 00       		.byte	0
+ 924 00d9 00       		.byte	0
+ 925 00da 11       		.uleb128 0x11
+ 926 00db 34       		.uleb128 0x34
+ 927 00dc 00       		.byte	0
+ 928 00dd 03       		.uleb128 0x3
+ 929 00de 0E       		.uleb128 0xe
+ 930 00df 3A       		.uleb128 0x3a
+ 931 00e0 0B       		.uleb128 0xb
+ 932 00e1 3B       		.uleb128 0x3b
+ 933 00e2 0B       		.uleb128 0xb
+ 934 00e3 39       		.uleb128 0x39
+ 935 00e4 0B       		.uleb128 0xb
+ 936 00e5 49       		.uleb128 0x49
+ 937 00e6 13       		.uleb128 0x13
+ 938 00e7 00       		.byte	0
+ 939 00e8 00       		.byte	0
+ 940 00e9 12       		.uleb128 0x12
+ 941 00ea 2E       		.uleb128 0x2e
+ 942 00eb 00       		.byte	0
+ 943 00ec 3F       		.uleb128 0x3f
+ 944 00ed 19       		.uleb128 0x19
+ 945 00ee 03       		.uleb128 0x3
+ 946 00ef 0E       		.uleb128 0xe
+ 947 00f0 3A       		.uleb128 0x3a
+ 948 00f1 0B       		.uleb128 0xb
+ 949 00f2 3B       		.uleb128 0x3b
+ 950 00f3 05       		.uleb128 0x5
+ 951 00f4 39       		.uleb128 0x39
+ 952 00f5 0B       		.uleb128 0xb
+ 953 00f6 27       		.uleb128 0x27
+ 954 00f7 19       		.uleb128 0x19
+ 955 00f8 00       		.byte	0
+ 956 00f9 00       		.byte	0
+ 957 00fa 13       		.uleb128 0x13
+ 958 00fb 2E       		.uleb128 0x2e
+ 959 00fc 00       		.byte	0
+ 960 00fd 3F       		.uleb128 0x3f
+ 961 00fe 19       		.uleb128 0x19
+ 962 00ff 03       		.uleb128 0x3
+ 963 0100 0E       		.uleb128 0xe
+ 964 0101 3A       		.uleb128 0x3a
+ 965 0102 0B       		.uleb128 0xb
+ 966 0103 3B       		.uleb128 0x3b
+ 967 0104 0B       		.uleb128 0xb
+ 968 0105 39       		.uleb128 0x39
+ 969 0106 0B       		.uleb128 0xb
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 18
+
+
+ 970 0107 27       		.uleb128 0x27
+ 971 0108 19       		.uleb128 0x19
+ 972 0109 00       		.byte	0
+ 973 010a 00       		.byte	0
+ 974 010b 14       		.uleb128 0x14
+ 975 010c 2E       		.uleb128 0x2e
+ 976 010d 00       		.byte	0
+ 977 010e 03       		.uleb128 0x3
+ 978 010f 0E       		.uleb128 0xe
+ 979 0110 3A       		.uleb128 0x3a
+ 980 0111 0B       		.uleb128 0xb
+ 981 0112 3B       		.uleb128 0x3b
+ 982 0113 0B       		.uleb128 0xb
+ 983 0114 39       		.uleb128 0x39
+ 984 0115 0B       		.uleb128 0xb
+ 985 0116 27       		.uleb128 0x27
+ 986 0117 19       		.uleb128 0x19
+ 987 0118 00       		.byte	0
+ 988 0119 00       		.byte	0
+ 989 011a 15       		.uleb128 0x15
+ 990 011b 2E       		.uleb128 0x2e
+ 991 011c 01       		.byte	0x1
+ 992 011d 03       		.uleb128 0x3
+ 993 011e 0E       		.uleb128 0xe
+ 994 011f 3A       		.uleb128 0x3a
+ 995 0120 0B       		.uleb128 0xb
+ 996 0121 3B       		.uleb128 0x3b
+ 997 0122 0B       		.uleb128 0xb
+ 998 0123 39       		.uleb128 0x39
+ 999 0124 0B       		.uleb128 0xb
+ 1000 0125 27       		.uleb128 0x27
+ 1001 0126 19       		.uleb128 0x19
+ 1002 0127 01       		.uleb128 0x1
+ 1003 0128 13       		.uleb128 0x13
+ 1004 0129 00       		.byte	0
+ 1005 012a 00       		.byte	0
+ 1006 012b 16       		.uleb128 0x16
+ 1007 012c 05       		.uleb128 0x5
+ 1008 012d 00       		.byte	0
+ 1009 012e 03       		.uleb128 0x3
+ 1010 012f 0E       		.uleb128 0xe
+ 1011 0130 3A       		.uleb128 0x3a
+ 1012 0131 0B       		.uleb128 0xb
+ 1013 0132 3B       		.uleb128 0x3b
+ 1014 0133 0B       		.uleb128 0xb
+ 1015 0134 39       		.uleb128 0x39
+ 1016 0135 0B       		.uleb128 0xb
+ 1017 0136 49       		.uleb128 0x49
+ 1018 0137 13       		.uleb128 0x13
+ 1019 0138 00       		.byte	0
+ 1020 0139 00       		.byte	0
+ 1021 013a 00       		.byte	0
+ 1022              		.section	.gnu.debuglto_.debug_line,"e",%progbits
+ 1023              	.Ldebug_line0:
+ 1024 0000 A1010000 		.4byte	.LELT0-.LSLT0
+ 1025              	.LSLT0:
+ 1026 0004 0400     		.2byte	0x4
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 19
+
+
+ 1027 0006 9B010000 		.4byte	.LELTP0-.LASLTP0
+ 1028              	.LASLTP0:
+ 1029 000a 01       		.byte	0x1
+ 1030 000b 01       		.byte	0x1
+ 1031 000c 01       		.byte	0x1
+ 1032 000d F6       		.byte	0xf6
+ 1033 000e F2       		.byte	0xf2
+ 1034 000f 0D       		.byte	0xd
+ 1035 0010 00       		.byte	0
+ 1036 0011 01       		.byte	0x1
+ 1037 0012 01       		.byte	0x1
+ 1038 0013 01       		.byte	0x1
+ 1039 0014 01       		.byte	0x1
+ 1040 0015 00       		.byte	0
+ 1041 0016 00       		.byte	0
+ 1042 0017 00       		.byte	0
+ 1043 0018 01       		.byte	0x1
+ 1044 0019 00       		.byte	0
+ 1045 001a 00       		.byte	0
+ 1046 001b 01       		.byte	0x1
+ 1047 001c 2E2E2F2E 		.ascii	"../../chibios2111/os/common/ext/ST/STM32G4xx"
+ 1047      2E2F6368 
+ 1047      6962696F 
+ 1047      73323131 
+ 1047      312F6F73 
+ 1048 0048 00       		.byte	0
+ 1049 0049 2E2E2F2E 		.ascii	"../../chibios2111/os/hal/boards/ST_NUCLEO64_G474RE"
+ 1049      2E2F6368 
+ 1049      6962696F 
+ 1049      73323131 
+ 1049      312F6F73 
+ 1050 007b 00       		.byte	0
+ 1051 007c 2E2E2F2E 		.ascii	"../../chibios2111/os/hal/ports/STM32/LLD/GPIOv2"
+ 1051      2E2F6368 
+ 1051      6962696F 
+ 1051      73323131 
+ 1051      312F6F73 
+ 1052 00ab 00       		.byte	0
+ 1053 00ac 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\10."
+ 1053      68696269 
+ 1053      73747564 
+ 1053      696F5C74 
+ 1053      6F6F6C73 
+ 1054 00db 33203230 		.ascii	"3 2021.10\\arm-none-eabi\\include\\machine"
+ 1054      32312E31 
+ 1054      305C6172 
+ 1054      6D2D6E6F 
+ 1054      6E652D65 
+ 1055 0102 00       		.byte	0
+ 1056 0103 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\10."
+ 1056      68696269 
+ 1056      73747564 
+ 1056      696F5C74 
+ 1056      6F6F6C73 
+ 1057 0132 33203230 		.ascii	"3 2021.10\\arm-none-eabi\\include\\sys"
+ 1057      32312E31 
+ 1057      305C6172 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 20
+
+
+ 1057      6D2D6E6F 
+ 1057      6E652D65 
+ 1058 0155 00       		.byte	0
+ 1059 0156 00       		.byte	0
+ 1060 0157 5F646566 		.ascii	"_default_types.h\000"
+ 1060      61756C74 
+ 1060      5F747970 
+ 1060      65732E68 
+ 1060      00
+ 1061 0168 04       		.uleb128 0x4
+ 1062 0169 00       		.uleb128 0
+ 1063 016a 00       		.uleb128 0
+ 1064 016b 5F737464 		.ascii	"_stdint.h\000"
+ 1064      696E742E 
+ 1064      6800
+ 1065 0175 05       		.uleb128 0x5
+ 1066 0176 00       		.uleb128 0
+ 1067 0177 00       		.uleb128 0
+ 1068 0178 73746D33 		.ascii	"stm32g474xx.h\000"
+ 1068      32673437 
+ 1068      3478782E 
+ 1068      6800
+ 1069 0186 01       		.uleb128 0x1
+ 1070 0187 00       		.uleb128 0
+ 1071 0188 00       		.uleb128 0
+ 1072 0189 73746D33 		.ascii	"stm32_gpio.h\000"
+ 1072      325F6770 
+ 1072      696F2E68 
+ 1072      00
+ 1073 0196 03       		.uleb128 0x3
+ 1074 0197 00       		.uleb128 0
+ 1075 0198 00       		.uleb128 0
+ 1076 0199 626F6172 		.ascii	"board.c\000"
+ 1076      642E6300 
+ 1077 01a1 02       		.uleb128 0x2
+ 1078 01a2 00       		.uleb128 0
+ 1079 01a3 00       		.uleb128 0
+ 1080 01a4 00       		.byte	0
+ 1081              	.LELTP0:
+ 1082              	.LELT0:
+ 1083              		.section	.gnu.debuglto_.debug_str,"eMS",%progbits,1
+ 1084              	.LASF74:
+ 1085 0000 50434461 		.ascii	"PCData\000"
+ 1085      746100
+ 1086              	.LASF58:
+ 1087 0007 4F535045 		.ascii	"OSPEEDR\000"
+ 1087      45445200 
+ 1088              	.LASF86:
+ 1089 000f 433A5C43 		.ascii	"C:\\ChibiStudio\\workspace_user\\RT-STM32G474RE-NUC"
+ 1089      68696269 
+ 1089      53747564 
+ 1089      696F5C77 
+ 1089      6F726B73 
+ 1090 003f 4C454F36 		.ascii	"LEO64\000"
+ 1090      3400
+ 1091              	.LASF28:
+ 1092 0045 41504231 		.ascii	"APB1RSTR1\000"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 21
+
+
+ 1092      52535452 
+ 1092      3100
+ 1093              	.LASF29:
+ 1094 004f 41504231 		.ascii	"APB1RSTR2\000"
+ 1094      52535452 
+ 1094      3200
+ 1095              	.LASF33:
+ 1096 0059 41484232 		.ascii	"AHB2ENR\000"
+ 1096      454E5200 
+ 1097              	.LASF77:
+ 1098 0061 50464461 		.ascii	"PFData\000"
+ 1098      746100
+ 1099              	.LASF5:
+ 1100 0068 73686F72 		.ascii	"short int\000"
+ 1100      7420696E 
+ 1100      7400
+ 1101              	.LASF64:
+ 1102 0072 73746D33 		.ascii	"stm32_gpio_t\000"
+ 1102      325F6770 
+ 1102      696F5F74 
+ 1102      00
+ 1103              	.LASF82:
+ 1104 007f 6770696F 		.ascii	"gpiop\000"
+ 1104      7000
+ 1105              	.LASF50:
+ 1106 0085 42444352 		.ascii	"BDCR\000"
+ 1106      00
+ 1107              	.LASF48:
+ 1108 008a 43434950 		.ascii	"CCIPR\000"
+ 1108      5200
+ 1109              	.LASF9:
+ 1110 0090 5F5F7569 		.ascii	"__uint32_t\000"
+ 1110      6E743332 
+ 1110      5F7400
+ 1111              	.LASF22:
+ 1112 009b 43494352 		.ascii	"CICR\000"
+ 1112      00
+ 1113              	.LASF79:
+ 1114 00a0 6770696F 		.ascii	"gpio_config_t\000"
+ 1114      5F636F6E 
+ 1114      6669675F 
+ 1114      7400
+ 1115              	.LASF8:
+ 1116 00ae 5F5F7569 		.ascii	"__uint16_t\000"
+ 1116      6E743136 
+ 1116      5F7400
+ 1117              	.LASF60:
+ 1118 00b9 42535252 		.ascii	"BSRR\000"
+ 1118      00
+ 1119              	.LASF24:
+ 1120 00be 41484231 		.ascii	"AHB1RSTR\000"
+ 1120      52535452 
+ 1120      00
+ 1121              	.LASF83:
+ 1122 00c7 636F6E66 		.ascii	"config\000"
+ 1122      696700
+ 1123              	.LASF16:
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 22
+
+
+ 1124 00ce 43464752 		.ascii	"CFGR\000"
+ 1124      00
+ 1125              	.LASF20:
+ 1126 00d3 43494552 		.ascii	"CIER\000"
+ 1126      00
+ 1127              	.LASF57:
+ 1128 00d8 4F545950 		.ascii	"OTYPER\000"
+ 1128      455200
+ 1129              	.LASF34:
+ 1130 00df 41484233 		.ascii	"AHB3ENR\000"
+ 1130      454E5200 
+ 1131              	.LASF72:
+ 1132 00e7 50414461 		.ascii	"PAData\000"
+ 1132      746100
+ 1133              	.LASF1:
+ 1134 00ee 6C6F6E67 		.ascii	"long long int\000"
+ 1134      206C6F6E 
+ 1134      6720696E 
+ 1134      7400
+ 1135              	.LASF59:
+ 1136 00fc 50555044 		.ascii	"PUPDR\000"
+ 1136      5200
+ 1137              	.LASF67:
+ 1138 0102 6F737065 		.ascii	"ospeedr\000"
+ 1138      65647200 
+ 1139              	.LASF45:
+ 1140 010a 41504231 		.ascii	"APB1SMENR2\000"
+ 1140      534D454E 
+ 1140      523200
+ 1141              	.LASF7:
+ 1142 0115 6C6F6E67 		.ascii	"long int\000"
+ 1142      20696E74 
+ 1142      00
+ 1143              	.LASF75:
+ 1144 011e 50444461 		.ascii	"PDData\000"
+ 1144      746100
+ 1145              	.LASF53:
+ 1146 0125 5243435F 		.ascii	"RCC_TypeDef\000"
+ 1146      54797065 
+ 1146      44656600 
+ 1147              	.LASF41:
+ 1148 0131 41484232 		.ascii	"AHB2SMENR\000"
+ 1148      534D454E 
+ 1148      5200
+ 1149              	.LASF56:
+ 1150 013b 4D4F4445 		.ascii	"MODER\000"
+ 1150      5200
+ 1151              	.LASF30:
+ 1152 0141 41504232 		.ascii	"APB2RSTR\000"
+ 1152      52535452 
+ 1152      00
+ 1153              	.LASF55:
+ 1154 014a 636C6561 		.ascii	"clear\000"
+ 1154      7200
+ 1155              	.LASF78:
+ 1156 0150 50474461 		.ascii	"PGData\000"
+ 1156      746100
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 23
+
+
+ 1157              	.LASF61:
+ 1158 0157 4C4F434B 		.ascii	"LOCKR\000"
+ 1158      5200
+ 1159              	.LASF2:
+ 1160 015d 6C6F6E67 		.ascii	"long double\000"
+ 1160      20646F75 
+ 1160      626C6500 
+ 1161              	.LASF4:
+ 1162 0169 756E7369 		.ascii	"unsigned char\000"
+ 1162      676E6564 
+ 1162      20636861 
+ 1162      7200
+ 1163              	.LASF17:
+ 1164 0177 504C4C43 		.ascii	"PLLCFGR\000"
+ 1164      46475200 
+ 1165              	.LASF38:
+ 1166 017f 41504232 		.ascii	"APB2ENR\000"
+ 1166      454E5200 
+ 1167              	.LASF51:
+ 1168 0187 43525243 		.ascii	"CRRCR\000"
+ 1168      5200
+ 1169              	.LASF3:
+ 1170 018d 7369676E 		.ascii	"signed char\000"
+ 1170      65642063 
+ 1170      68617200 
+ 1171              	.LASF11:
+ 1172 0199 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1172      206C6F6E 
+ 1172      6720756E 
+ 1172      7369676E 
+ 1172      65642069 
+ 1173              	.LASF13:
+ 1174 01b0 75696E74 		.ascii	"uint32_t\000"
+ 1174      33325F74 
+ 1174      00
+ 1175              	.LASF44:
+ 1176 01b9 41504231 		.ascii	"APB1SMENR1\000"
+ 1176      534D454E 
+ 1176      523100
+ 1177              	.LASF66:
+ 1178 01c4 6F747970 		.ascii	"otyper\000"
+ 1178      657200
+ 1179              	.LASF25:
+ 1180 01cb 41484232 		.ascii	"AHB2RSTR\000"
+ 1180      52535452 
+ 1180      00
+ 1181              	.LASF12:
+ 1182 01d4 75696E74 		.ascii	"uint16_t\000"
+ 1182      31365F74 
+ 1182      00
+ 1183              	.LASF10:
+ 1184 01dd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1184      20756E73 
+ 1184      69676E65 
+ 1184      6420696E 
+ 1184      7400
+ 1185              	.LASF88:
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 24
+
+
+ 1186 01ef 73746D33 		.ascii	"stm32_gpio_init\000"
+ 1186      325F6770 
+ 1186      696F5F69 
+ 1186      6E697400 
+ 1187              	.LASF87:
+ 1188 01ff 6770696F 		.ascii	"gpio_default_config\000"
+ 1188      5F646566 
+ 1188      61756C74 
+ 1188      5F636F6E 
+ 1188      66696700 
+ 1189              	.LASF36:
+ 1190 0213 41504231 		.ascii	"APB1ENR1\000"
+ 1190      454E5231 
+ 1190      00
+ 1191              	.LASF37:
+ 1192 021c 41504231 		.ascii	"APB1ENR2\000"
+ 1192      454E5232 
+ 1192      00
+ 1193              	.LASF62:
+ 1194 0225 4146524C 		.ascii	"AFRL\000"
+ 1194      00
+ 1195              	.LASF52:
+ 1196 022a 43434950 		.ascii	"CCIPR2\000"
+ 1196      523200
+ 1197              	.LASF15:
+ 1198 0231 49435343 		.ascii	"ICSCR\000"
+ 1198      5200
+ 1199              	.LASF63:
+ 1200 0237 41465248 		.ascii	"AFRH\000"
+ 1200      00
+ 1201              	.LASF14:
+ 1202 023c 63686172 		.ascii	"char\000"
+ 1202      00
+ 1203              	.LASF46:
+ 1204 0241 41504232 		.ascii	"APB2SMENR\000"
+ 1204      534D454E 
+ 1204      5200
+ 1205              	.LASF81:
+ 1206 024b 5F5F6561 		.ascii	"__early_init\000"
+ 1206      726C795F 
+ 1206      696E6974 
+ 1206      00
+ 1207              	.LASF6:
+ 1208 0258 73686F72 		.ascii	"short unsigned int\000"
+ 1208      7420756E 
+ 1208      7369676E 
+ 1208      65642069 
+ 1208      6E7400
+ 1209              	.LASF54:
+ 1210 026b 5F426F6F 		.ascii	"_Bool\000"
+ 1210      6C00
+ 1211              	.LASF76:
+ 1212 0271 50454461 		.ascii	"PEData\000"
+ 1212      746100
+ 1213              	.LASF18:
+ 1214 0278 52455345 		.ascii	"RESERVED0\000"
+ 1214      52564544 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 25
+
+
+ 1214      3000
+ 1215              	.LASF19:
+ 1216 0282 52455345 		.ascii	"RESERVED1\000"
+ 1216      52564544 
+ 1216      3100
+ 1217              	.LASF23:
+ 1218 028c 52455345 		.ascii	"RESERVED2\000"
+ 1218      52564544 
+ 1218      3200
+ 1219              	.LASF27:
+ 1220 0296 52455345 		.ascii	"RESERVED3\000"
+ 1220      52564544 
+ 1220      3300
+ 1221              	.LASF31:
+ 1222 02a0 52455345 		.ascii	"RESERVED4\000"
+ 1222      52564544 
+ 1222      3400
+ 1223              	.LASF35:
+ 1224 02aa 52455345 		.ascii	"RESERVED5\000"
+ 1224      52564544 
+ 1224      3500
+ 1225              	.LASF39:
+ 1226 02b4 52455345 		.ascii	"RESERVED6\000"
+ 1226      52564544 
+ 1226      3600
+ 1227              	.LASF43:
+ 1228 02be 52455345 		.ascii	"RESERVED7\000"
+ 1228      52564544 
+ 1228      3700
+ 1229              	.LASF47:
+ 1230 02c8 52455345 		.ascii	"RESERVED8\000"
+ 1230      52564544 
+ 1230      3800
+ 1231              	.LASF49:
+ 1232 02d2 52455345 		.ascii	"RESERVED9\000"
+ 1232      52564544 
+ 1232      3900
+ 1233              	.LASF21:
+ 1234 02dc 43494652 		.ascii	"CIFR\000"
+ 1234      00
+ 1235              	.LASF32:
+ 1236 02e1 41484231 		.ascii	"AHB1ENR\000"
+ 1236      454E5200 
+ 1237              	.LASF89:
+ 1238 02e9 6770696F 		.ascii	"gpio_init\000"
+ 1238      5F696E69 
+ 1238      7400
+ 1239              	.LASF68:
+ 1240 02f3 70757064 		.ascii	"pupdr\000"
+ 1240      7200
+ 1241              	.LASF70:
+ 1242 02f9 61667268 		.ascii	"afrh\000"
+ 1242      00
+ 1243              	.LASF71:
+ 1244 02fe 6770696F 		.ascii	"gpio_setup_t\000"
+ 1244      5F736574 
+ 1244      75705F74 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 26
+
+
+ 1244      00
+ 1245              	.LASF69:
+ 1246 030b 6166726C 		.ascii	"afrl\000"
+ 1246      00
+ 1247              	.LASF65:
+ 1248 0310 6D6F6465 		.ascii	"moder\000"
+ 1248      7200
+ 1249              	.LASF42:
+ 1250 0316 41484233 		.ascii	"AHB3SMENR\000"
+ 1250      534D454E 
+ 1250      5200
+ 1251              	.LASF40:
+ 1252 0320 41484231 		.ascii	"AHB1SMENR\000"
+ 1252      534D454E 
+ 1252      5200
+ 1253              	.LASF26:
+ 1254 032a 41484233 		.ascii	"AHB3RSTR\000"
+ 1254      52535452 
+ 1254      00
+ 1255              	.LASF85:
+ 1256 0333 2E2E2F2E 		.ascii	"../../chibios2111/os/hal/boards/ST_NUCLEO64_G474RE/"
+ 1256      2E2F6368 
+ 1256      6962696F 
+ 1256      73323131 
+ 1256      312F6F73 
+ 1257 0366 626F6172 		.ascii	"board.c\000"
+ 1257      642E6300 
+ 1258              	.LASF73:
+ 1259 036e 50424461 		.ascii	"PBData\000"
+ 1259      746100
+ 1260              	.LASF0:
+ 1261 0375 756E7369 		.ascii	"unsigned int\000"
+ 1261      676E6564 
+ 1261      20696E74 
+ 1261      00
+ 1262              	.LASF80:
+ 1263 0382 626F6172 		.ascii	"boardInit\000"
+ 1263      64496E69 
+ 1263      7400
+ 1264              	.LASF84:
+ 1265 038c 474E5520 		.ascii	"GNU C17 10.3.1 20210824 (release) -mcpu=cortex-m4 -"
+ 1265      43313720 
+ 1265      31302E33 
+ 1265      2E312032 
+ 1265      30323130 
+ 1266 03bf 6D746875 		.ascii	"mthumb -mfloat-abi=soft -march=armv7e-m -ggdb -O0 -"
+ 1266      6D62202D 
+ 1266      6D666C6F 
+ 1266      61742D61 
+ 1266      62693D73 
+ 1267 03f2 666F6D69 		.ascii	"fomit-frame-pointer -falign-functions=16 -ffunction"
+ 1267      742D6672 
+ 1267      616D652D 
+ 1267      706F696E 
+ 1267      74657220 
+ 1268 0425 2D736563 		.ascii	"-sections -fdata-sections -fno-common -flto\000"
+ 1268      74696F6E 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 27
+
+
+ 1268      73202D66 
+ 1268      64617461 
+ 1268      2D736563 
+ 1269              		.text
+ 1270              		.section	.gnu.lto_.inline.1f2b675c,"e",%progbits
+ 1271 0000 789C3BC7 		.ascii	"x\234;\307\200\000,\014\014\202\015@\300\224\316\300"
+ 1271      80002C0C 
+ 1271      0C820D40 
+ 1271      C094CEC0 
+ 1272 0010 C0240763 		.ascii	"\300$\007c\26104\002YuL\014L@%\214\014j@\316\004\346"
+ 1272      B1303402 
+ 1272      59754C0C 
+ 1272      4C40258C 
+ 1272      0C6A40CE 
+ 1273 0026 4C9C2A98 		.ascii	"L\234*\230y\200\004\023\0314\003+\320\220\007`\273\231"
+ 1273      79800413 
+ 1273      1934032B 
+ 1273      D0900760 
+ 1273      BB99
+ 1274 0038 C026A7A0 		.ascii	"\300&\247\240\333\315\305\000'Y\030\230ajp\250f\000"
+ 1274      DBCDC500 
+ 1274      27591898 
+ 1274      616A70A8 
+ 1274      6600
+ 1275 004a 00CAEC1F 		.ascii	"\000\312\354\037\275"
+ 1275      BD
+ 1276              		.text
+ 1277              		.section	.gnu.lto_.jmpfuncs.1f2b675c,"e",%progbits
+ 1278 0000 789C6362 		.ascii	"x\234cb@\006\000\000*\000\003"
+ 1278      40060000 
+ 1278      2A0003
+ 1279              		.text
+ 1280              		.section	.gnu.lto_.lto.1f2b675c,"e",%progbits
+ 1281 0000 09000400 		.ascii	"\011\000\004\000\001\000\000\000"
+ 1281      01000000 
+ 1282              		.text
+ 1283              		.section	.gnu.lto_gpio_default_config.402.1f2b675c,"e",%progbits
+ 1284 0000 789C9362 		.ascii	"x\234\223bb``d\200\2009\314\214\223\230\2270\003\371"
+ 1284      62606064 
+ 1284      808039CC 
+ 1284      8C939897 
+ 1284      3003F9
+ 1285 0013 70D67F20 		.ascii	"p\326\177 \340\007\362,\233:\032d\22603\316\005\212"
+ 1285      E007F22C 
+ 1285      9B3A1A64 
+ 1285      963033CE 
+ 1285      058A
+ 1286 0025 6D05928C 		.ascii	"m\005\222\214\214[\200$\023\230d\006\223,`\222\025L"
+ 1286      8C5B8024 
+ 1286      13986406 
+ 1286      932C6092 
+ 1286      154C
+ 1287 0037 B201C9C1 		.ascii	"\262\001\311\301\257\011\356\303\371\350>\334E\232\021"
+ 1287      AF09EEC3 
+ 1287      F9E83EDC 
+ 1287      459A11
+ 1288 0046 0710CCFD 		.ascii	"\007\020\314\375X\302k/\222i{\010\233\3260\203\031\301"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 28
+
+
+ 1288      58C26B2F 
+ 1288      92697B08 
+ 1288      9BD63083 
+ 1288      19C1
+ 1289 0058 6E6858C0 		.ascii	"nhX\300\204$\323\360\000!\267\376\375\377\373|hV\035"
+ 1289      8424D3F0 
+ 1289      0021B7FE 
+ 1289      FDFFFB7C 
+ 1289      68561D
+ 1290 006b 42B2EA20 		.ascii	"B\262\352 \330\252\003HV\355\207Z\005\325\3014\227\231"
+ 1290      D8AA0348 
+ 1290      56ED875A 
+ 1290      05D5C134 
+ 1290      9799
+ 1291 007d 9DF13050 		.ascii	"\235\3610P\214\203q\037\220\344d\334\015$\271\030w\002"
+ 1291      8C83711F 
+ 1291      90E464DC 
+ 1291      0D24B918 
+ 1291      7702
+ 1292 008f 496EC61D 		.ascii	"In\306\035@\222\207q;\220\344e\334\306\310\000\000\210"
+ 1292      40928771 
+ 1292      3B90E465 
+ 1292      DCC6C800 
+ 1292      0088
+ 1293 00a1 9D8B24   		.ascii	"\235\213$"
+ 1294              		.text
+ 1295              		.section	.gnu.lto_gpio_init.403.1f2b675c,"e",%progbits
+ 1296 0000 789C8D93 		.ascii	"x\234\215\223\317k\023Q\020\307gv\366G6VPo\236T\020"
+ 1296      CF6B1351 
+ 1296      10C76776 
+ 1296      F6473656 
+ 1296      506F9E54 
+ 1297 0015 C443B3A6 		.ascii	"\304C\263\246\206\204\3521\024A\374\001M\274\005B\222"
+ 1297      8684EA31 
+ 1297      1441FC01 
+ 1297      4DBC0542 
+ 1297      92
+ 1298 0026 A66DB0B8 		.ascii	"\246m\260\270!k\360\320C\236QP\012\032m\257Z1l\245\267"
+ 1298      216BF0D0 
+ 1298      439E5150 
+ 1298      0A1A6DAF 
+ 1298      5A316CA5 
+ 1299 003b 9ED4562B 		.ascii	"\236\324V+\206\242\"\242RJ\177\035\375\013\212\365 "
+ 1299      86A222A2 
+ 1299      524A7F1D 
+ 1299      FD0B8AF5 
+ 1299      20
+ 1300 004c 0A429CB7 		.ascii	"\012B\234\267\233R{p\311cw\230y\373\375~f\336\262;G"
+ 1300      9B527B70 
+ 1300      C9637798 
+ 1300      79FBFD7E 
+ 1300      66DEB23B 
+ 1301 0061 00530070 		.ascii	"\000S\000p\214o \300\311\207\023\012\264\333\355\232"
+ 1301      8C6F20C0 
+ 1301      C987130A 
+ 1301      B4DBED9A 
+ 1302 0071 AAE0CDE3 		.ascii	"\252\340\315\343\370\032\275\034\241\246`\015\247\350"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 29
+
+
+ 1302      F81ABD1C 
+ 1302      A1A6600D 
+ 1302      A7E8
+ 1303 007f A410E2D7 		.ascii	"\244\020\342\327\314\364\223\031C\314\266\320e\3634"
+ 1303      CCF49319 
+ 1303      43CCB6D0 
+ 1303      65F334
+ 1304 008e 81BF1E11 		.ascii	"\201\277\036\021N\222K\210j'S\360(gT\205\023-!\226\277"
+ 1304      4E924B88 
+ 1304      6A2753F0 
+ 1304      28675485 
+ 1304      132D2196 
+ 1305 00a3 CC0B6182 		.ascii	"\314\013a\202K\204/\221=\370\002\3619\202\334\030\377"
+ 1305      4B842F91 
+ 1305      3DF802F1 
+ 1305      3982DC18 
+ 1305      FF
+ 1306 00b4 694ADD3D 		.ascii	"iJ\335=\364\205wo\335\021\007T\227T\\\330+T\307\353"
+ 1306      F485776F 
+ 1306      DD110754 
+ 1306      97545CD8 
+ 1306      2B54C7EB 
+ 1307 00c8 61007DA7 		.ascii	"a\000}\247%\357\301\334\212\326\022\177\332\015!\336"
+ 1307      25EFC1DC 
+ 1307      8AD6127F 
+ 1307      DA0D21DE 
+ 1308 00d8 1FBEBFA1 		.ascii	"\037\276\277\241\036B\226i\212\014$\203*\203&\203.\203"
+ 1308      1E429669 
+ 1308      8A0C2483 
+ 1308      2A832683 
+ 1308      2E83
+ 1309 00ea 218389F8 		.ascii	"!\203\211\370\012\303\210\363\354o\220<\252\267\216"
+ 1309      0AC388F3 
+ 1309      EC6F903C 
+ 1309      AAB78E
+ 1310 00f9 70F98094 		.ascii	"p\371\200\224\335\022a\013\353\213\277W\233F\223\260"
+ 1310      DD12610B 
+ 1310      EB8BBF57 
+ 1310      9B4693B0 
+ 1311 0109 73227E0F 		.ascii	"s\"~\017\234=C~\011!\227\364&\231\270\210p\352\266W"
+ 1311      9C3D437E 
+ 1311      092197F4 
+ 1311      2699B888 
+ 1311      70EAB657 
+ 1312 011d 1AF8061F 		.ascii	"\032\370\006\037{\223m\341\322\367\2115\245c\242]\323"
+ 1312      7B936DE1 
+ 1312      D2F78935 
+ 1312      A563A25D 
+ 1312      D3
+ 1313 012e 6C8F4BA1 		.ascii	"l\217K\241&\205\361-\273\236z.\023[\354\342\346\334"
+ 1313      2685F12D 
+ 1313      BB9E7A2E 
+ 1313      135BECE2 
+ 1313      E6DC
+ 1314 0140 C5EBB8B0 		.ascii	"\305\353\270\260&;*A}\226\330\241\354\351\363\177\372"
+ 1314      263B2A41 
+ 1314      7D96D8A1 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 30
+
+
+ 1314      ECE9F37F 
+ 1314      FA
+ 1315 0151 3BD692A4 		.ascii	";\326\222\244+\376y<:\005\321?\260C\355\222\376\221"
+ 1315      2BFE793C 
+ 1315      3A05D13F 
+ 1315      B043ED92 
+ 1315      FE91
+ 1316 0163 B59AA493 		.ascii	"\265\232\244\223?\373\272\244\253A\364O\354\320\273"
+ 1316      3FFBBAA4 
+ 1316      AB41F44F 
+ 1316      ECD0BB
+ 1317 0172 A47F66AD 		.ascii	"\244\177f\255!\351\252?\273G\327\202\350_\331\021\352"
+ 1317      21E9AA3F 
+ 1317      BB47D782 
+ 1317      E85FD911 
+ 1317      EA
+ 1318 0183 92BECC5A 		.ascii	"\222\276\314ZS\3225\177\366\015I\327\203\350+\354\010"
+ 1318      53D2357F 
+ 1318      F60D49D7 
+ 1318      83E82BEC 
+ 1318      08
+ 1319 0194 77495F65 		.ascii	"wI_e\355>I\327\375\331=\272\021D_gGO\227\364M\326\356"
+ 1319      ED3E49D7 
+ 1319      FDD93DBA 
+ 1319      11445F67 
+ 1319      474F97F4 
+ 1320 01ab 9774037E 		.ascii	"\227t\003~`\375\333\366y\357\017l\020\376\3739\003\304"
+ 1320      60FDDBF6 
+ 1320      79EF0F6C 
+ 1320      10FEFB39 
+ 1320      03C4
+ 1321 01bd 936732C9 		.ascii	"\223g2\311\321R\276\224\272^\035*\331\231\033v\345\252"
+ 1321      D152BE94 
+ 1321      BA5E1D2A 
+ 1321      D9991B76 
+ 1321      E5AA
+ 1322 01cf 53CE158A 		.ascii	"S\316\025\212\331\252S\254d\006\323\275\251\364\305"
+ 1322      D9AA53AC 
+ 1322      6406D3BD 
+ 1322      A9F4C5
+ 1323 01de D37DE762 		.ascii	"\323}\347b\211\330\340@\357\245+\311\013\003\227\343"
+ 1323      89D8E040 
+ 1323      EFA52BC9 
+ 1323      0B0397E3 
+ 1324 01ee 31381B89 		.ascii	"18\033\211X|\025\244\323v\372\242\321\250e;\326hn\314"
+ 1324      587C15A4 
+ 1324      D376FAA2 
+ 1324      D1A8653B 
+ 1324      D6686ECC 
+ 1325 0202 CADBB9CA 		.ascii	"\312\333\271\312\220c\245\322\331\035q\3267\373O\"\005"
+ 1325      9063A5D2 
+ 1325      D91D71D6 
+ 1325      37FB4F22 
+ 1325      05
+ 1326 0213 D046CA25 		.ascii	"\320F\312%\273|\260SF\372\373\023\371D\2748\014z\301"
+ 1326      BB7CB053 
+ 1326      46FAFB13 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 31
+
+
+ 1326      F944BC38 
+ 1326      0C7AC1
+ 1327 0226 BE365C1A 		.ascii	"\2766\\\032\371\013_\322U\015"
+ 1327      F90B5FD2 
+ 1327      550D
+ 1328              		.text
+ 1329              		.section	.gnu.lto_stm32_gpio_init.404.1f2b675c,"e",%progbits
+ 1330 0000 789C7594 		.ascii	"x\234u\224[H\024a\024\307\2773\337\354\354\305\365\366"
+ 1330      5B481461 
+ 1330      14C7BF33 
+ 1330      DFECECC5 
+ 1330      F5F6
+ 1331 0012 A0E053FA 		.ascii	"\240\340S\372\320C\224\273\256\211E=\212\364R\006jo"
+ 1331      D04394BB 
+ 1331      AE89453D 
+ 1331      8AF45206 
+ 1331      6A6F
+ 1332 0024 82780325 		.ascii	"\202x\003%a\303\315z\350\301O[S|\361\026\326\203\211"
+ 1332      61C3CD7A 
+ 1332      E8C14F5B 
+ 1332      537CF116 
+ 1332      D68389
+ 1333 0037 2D63EC5B 		.ascii	"-c\354[\022T\"f\233AHE\204DZPJ%t\201\332\204.\220\261"
+ 1333      12542266 
+ 1333      9B414845 
+ 1333      84445A50 
+ 1333      4A257481 
+ 1334 0050 9D33B3C3 		.ascii	"\2353\263\303\314\264\263\313\356\307\377\3339\347\377"
+ 1334      CCB4B3CB 
+ 1334      EEC7FFDB 
+ 1334      39E7FF
+ 1335 005f FBCF99CB 		.ascii	"\373\317\231\313\224\302\230`\214\035\306\037s1\230"
+ 1335      94C29860 
+ 1335      8C1DC61F 
+ 1335      733198
+ 1336 006e 181F9158 		.ascii	"\030\037\221X*\225\352\223%\230D\015\267A\333q\270<"
+ 1336      2A95EA93 
+ 1336      2598440D 
+ 1336      B741DB71 
+ 1336      B83C
+ 1337 0080 EED3940C 		.ascii	"\356\323\224\014\375\262&\200\365I\\\206>\230\344\373"
+ 1337      FDB22680 
+ 1337      F5495C86 
+ 1337      3E98E4FB 
+ 1338 0090 8410BFE7 		.ascii	"\204\020\277\347f\026\347\334\"\236\000\22536\303\231"
+ 1338      6616E7DC 
+ 1338      229E0095 
+ 1338      3336C399 
+ 1339 00a0 F1518C1D 		.ascii	"\361Q\214\0350&Ms\230\340*\007\220\323J\202RT\274\227"
+ 1339      30264D73 
+ 1339      98E02A07 
+ 1339      90D34A82 
+ 1339      5254BC97 
+ 1340 00b4 ED4DF48B 		.ascii	"\355M\364\213\344\362vr\026V\205\254r\016\013\200mp"
+ 1340      E4F27672 
+ 1340      165685AC 
+ 1340      720E0B80 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 32
+
+
+ 1340      6D70
+ 1341 00c6 17E00E68 		.ascii	"\027\340\016h>TvA+\233\277?84R\020-\245\252\305\377"
+ 1341      3E547641 
+ 1341      2B9BBF3F 
+ 1341      38345210 
+ 1341      2DA5AAC5 
+ 1342 00db AA6EAEB9 		.ascii	"\252n\256\271\022b75*\304\372\376'\273\357\274e\300"
+ 1342      12623735 
+ 1342      2AC4FAFE 
+ 1342      27BBEFBC 
+ 1342      65C0
+ 1343 00ed 542E4BB8 		.ascii	"T.K\270pNJ&\345\"\245\220r\223\362\220\362\222\362\321"
+ 1343      704E4A26 
+ 1343      E522A590 
+ 1343      7293F290 
+ 1343      F292F2D1 
+ 1344 0101 92435B3F 		.ascii	"\222C[?\251\\Ry\244\362I\025\220*$UDK1mKH16\312ij\332"
+ 1344      A95C5279 
+ 1344      A4F24915 
+ 1344      902A2455 
+ 1344      444B316D 
+ 1345 011d 670F0619 		.ascii	"g\017\006\031\343\222\271\005\366\025\006v\0266+c\372"
+ 1345      E392B905 
+ 1345      F6150676 
+ 1345      16362B63 
+ 1345      FA
+ 1346 012e 29CB2066 		.ascii	")\313 f\207\205\214\377\256,yc\334\230\011\016\024\325"
+ 1346      87858CFF 
+ 1346      AE2C7963 
+ 1346      DC98090E 
+ 1346      14D5
+ 1347 0140 0DC0597A 		.ascii	"\015\300YzT\356\302b\270\007\254\242L\345\012,\3035"
+ 1347      54EEC262 
+ 1347      B807ACA2 
+ 1347      4CE50A2C 
+ 1347      C335
+ 1348 0152 6D8464E4 		.ascii	"m\204d\344\211\341i/\221\351\305\211!\210q\031-\250"
+ 1348      89E1692F 
+ 1348      91E9C589 
+ 1348      21887119 
+ 1348      2DA8
+ 1349 0164 9F438A0A 		.ascii	"\237C\212\012V\222#`\367\341\246\317\003\335\007\233"
+ 1349      56922360 
+ 1349      F7E1A6CF 
+ 1349      03DD079B 
+ 1350 0174 0C2B976E 		.ascii	"\014+\227n\245%Q\354}.\263\357\241\235\357N\363\247"
+ 1350      A52551EC 
+ 1350      7D2EB3EF 
+ 1350      A19DEF4E 
+ 1350      F3A7
+ 1351 0186 888F7B45 		.ascii	"\210\217{E\347\013<\335|\307\010n\323\352\221\021\301"
+ 1351      E70B3CDD 
+ 1351      7CC7086E 
+ 1351      D3EA9111 
+ 1351      C1
+ 1352 0197 63B8792D 		.ascii	"c\270y-\021\212\354}^\255\357\272\266U`\325\222bcS\212"
+ 1352      118AEC7D 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 33
+
+
+ 1352      5EADEFBA 
+ 1352      B65560D5 
+ 1352      92626353 
+ 1353 01ac 719FA533 		.ascii	"q\237\2453\307\336\3513\211\217\261\015\314\360~\353"
+ 1353      C7DEE933 
+ 1353      898FB10D 
+ 1353      CCF07EEB 
+ 1354 01bc F072B111 		.ascii	"\360r\261\021\022\340\030\332oZ<\325-\260\236\321\305"
+ 1354      12E018DA 
+ 1354      6F5A3CD5 
+ 1354      2DB09ED1 
+ 1354      C5
+ 1355 01cd E5968B0B 		.ascii	"\345\226\213\013i\333<K\226|\273Q\236i\364\014\215$"
+ 1355      69DB3C4B 
+ 1355      967CBB51 
+ 1355      9E69F40C 
+ 1355      8D24
+ 1356 01df 334B8135 		.ascii	"3K\2015K!6f\313R`Z<\327-\260^\313\"[\262\310i\333bK"
+ 1356      4B213666 
+ 1356      CB52605A 
+ 1356      3CD72DB0 
+ 1356      5ECB225B 
+ 1357 01f9 9612BB51 		.ascii	"\226\022\273Q\261m\242k\3518I\030\334\232\312aQ\220"
+ 1357      B16DA26B 
+ 1357      E9384918 
+ 1357      DC9ACA61 
+ 1357      5190
+ 1358 020b 54EE9EA1 		.ascii	"T\356\236\241S\245+\352\241\266\204\361\244z\265\373"
+ 1358      53A52BEA 
+ 1358      A1B684F1 
+ 1358      A47AB5FB 
+ 1359 021b 330A0ACA 		.ascii	"3\012\012\3128g\372\315\212O\252\017\326\001^j\007+"
+ 1359      3867FACD 
+ 1359      8A4FAA0F 
+ 1359      D6015E6A 
+ 1359      072B
+ 1360 022d A242C40F 		.ascii	"\242B\304\017\2508\322\0154\306\232(\\\022\342#\276"
+ 1360      A838D20D 
+ 1360      34C69A28 
+ 1360      5C12E223 
+ 1360      BE
+ 1361 023e 11FCF00A 		.ascii	"\021\374\360\012\360]\242\342\000\2115\355\304\032\326"
+ 1361      F05DA2E2 
+ 1361      008935ED 
+ 1361      C41AD6
+ 1362 024d 594E8437 		.ascii	"YN\2047\231\204\267H\220m\204M+\341\226\023a,;\341}"
+ 1362      9984B748 
+ 1362      906D844D 
+ 1362      2BE19613 
+ 1362      612C3BE1 
+ 1363 0262 26E10312 		.ascii	"&\341\003\022\\6\302\266\225\260\340D\270\232\235\360"
+ 1363      5C36C2B6 
+ 1363      95B0E044 
+ 1363      B89A9DF0 
+ 1364 0272 2993F019 		.ascii	")\223\360\031\011\212\215\360\305JXv\"\314f'|\313$$"
+ 1364      098A8DF0 
+ 1364      C54A5876 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 34
+
+
+ 1364      22CC6627 
+ 1364      7CCB2424 
+ 1365 0286 91E0B611 		.ascii	"\221\340\266\021\276[\011/\234\010\361\354\204\037\231"
+ 1365      BE5B092F 
+ 1365      9C08F1EC 
+ 1365      841F99
+ 1366 0295 849F48F0 		.ascii	"\204\237H\360\330\010\277\254\204\327N\204\371\354\204"
+ 1366      D808BFAC 
+ 1366      84D74E84 
+ 1366      F9EC84
+ 1367 02a4 3F99845D 		.ascii	"?\231\204]$xm\204\277\006a\007\006\266\256\324i/\376"
+ 1367      24786D84 
+ 1367      BF066107 
+ 1367      06B6AED4 
+ 1367      692FFE
+ 1368 02b7 510ED637 		.ascii	"Q\016\32670c\3255G\232j:\273Z\273\032\316\366\266w\205"
+ 1368      3063D535 
+ 1368      479A6A3A 
+ 1368      BB5ABB1A 
+ 1368      CEF6B677 
+ 1369 02cc 9BCE877B 		.ascii	"\233\316\207{NG\316\264\264u4\367F:z\232\352\033\313"
+ 1369      4E47CEB4 
+ 1369      B47534F7 
+ 1369      463A7A9A 
+ 1369      EA1BCB
+ 1370 02df 1B1A4F1C 		.ascii	"\033\032O\034\254<Vu\250\252\276\266\274\356T\315\361"
+ 1370      AC3C5675 
+ 1370      A8AABEB6 
+ 1370      BCEE54CD 
+ 1370      F1
+ 1371 02f0 DA93D555 		.ascii	"\332\223\325U\354h \020\304o\033u\206#\225\241P(\030"
+ 1371      EC682010 
+ 1371      C46F1B75 
+ 1371      862395A1 
+ 1371      502818
+ 1372 0303 8E043B5B 		.ascii	"\216\004;[\272\203\255\341\226\236\366H\260\241\261"
+ 1372      BA83ADE1 
+ 1372      969EF648 
+ 1372      B0A1B1
+ 1373 0312 D9286ED6 		.ascii	"\331(n\326\233\365#\2016\346:\027\356\016Thk\350\037"
+ 1373      9BF52381 
+ 1373      36E63A17 
+ 1373      EE0E5468 
+ 1373      6BE81F
+ 1374 0325 30211798 		.ascii	"0!\027\230"
+ 1375              		.text
+ 1376              		.section	.gnu.lto___early_init.405.1f2b675c,"e",%progbits
+ 1377 0000 789C5BC2 		.ascii	"x\234[\302\300\300P\002\304\212@\314\300\314\3008ib"
+ 1377      C0C05002 
+ 1377      C48A40CC 
+ 1377      C0CCC038 
+ 1377      6962
+ 1378 0012 1713C3FF 		.ascii	"\027\023\303\377\377\377\353Y\230\030\033U\030\2672"
+ 1378      FFFFEB59 
+ 1378      98181B55 
+ 1378      18B732
+ 1379 0021 82D98C0C 		.ascii	"\202\331\214\014\365L\214\365\214\223\2315\033\032\032"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 35
+
+
+ 1379      F54C8CF5 
+ 1379      8C939935 
+ 1379      1B1A1A
+ 1380 0030 7E2C9DB7 		.ascii	"~,\235\267\3528c\303\212\003\214K\230\031\030\34613"
+ 1380      EA3863C3 
+ 1380      8A038C4B 
+ 1380      981918E6 
+ 1380      3133
+ 1381 0042 C0001B8C 		.ascii	"\300\000\033\214\307\010\304\353/\261\036h\370\363\277"
+ 1381      C708C4EB 
+ 1381      2FB11E68 
+ 1381      F8F3BF
+ 1382 0051 BFA1E1EC 		.ascii	"\277\241\341\354c\306u\352,\014\014\375\314 \203\301"
+ 1382      63C675EA 
+ 1382      2C0C0CFD 
+ 1382      CC2083C1 
+ 1383 0061 401EA862 		.ascii	"@\036\250b\0023\023\202\313\310\360\201\261\371\301"
+ 1383      02331382 
+ 1383      CBC8F081 
+ 1383      B1F9C1
+ 1384 0070 CD738C0C 		.ascii	"\315s\214\014-\214LK\230\031\3471\003U,af\002\013\337"
+ 1384      2D8C4C4B 
+ 1384      9819E731 
+ 1384      03552C61 
+ 1384      66020BDF 
+ 1385 0084 E2838B32 		.ascii	"\342\203\2132AD?16=\270\353\007\266\264\237\231\021"
+ 1385      41443F31 
+ 1385      363DB8EB 
+ 1385      07B6B49F 
+ 1385      9911
+ 1386 0096 D9540606 		.ascii	"\331T\006\0063g\253\030\347\214\314\244\314\340\222"
+ 1386      3367AB18 
+ 1386      E78CCCA4 
+ 1386      CCE092
+ 1387 00a5 D294CCFC 		.ascii	"\322\224\314\374\230\362\374\242\354\342\202\304\344"
+ 1387      98F2FCA2 
+ 1387      ECE282C4 
+ 1387      E4
+ 1388 00b2 D4F8D2E2 		.ascii	"\324\370\322\342\324\242\230\240\020\335\340\020_c#"
+ 1388      D4A298A0 
+ 1388      10DDE010 
+ 1388      5F6323
+ 1389 00c1 77137393 		.ascii	"w\023s\223 W]\277Pg\037W\1773\023\006k==} J\006\351"
+ 1389      20575DBF 
+ 1389      50671F57 
+ 1389      7F331306 
+ 1389      6B3D3D7D 
+ 1390 00d9 CC2F3632 		.ascii	"\314/6244\324\317/\326\317H\314\321O\312O,J)\326\017"
+ 1390      3434D4CF 
+ 1390      2FD6CF48 
+ 1390      CCD14FCA 
+ 1390      4F2C4A29 
+ 1391 00ef 0E898729 		.ascii	"\016\211\207)\216\207h\206\310\350%3\000\000Lkl\316"
+ 1391      8E876886 
+ 1391      C8E82533 
+ 1391      00004C6B 
+ 1391      6CCE
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 36
+
+
+ 1392              		.text
+ 1393              		.section	.gnu.lto_boardInit.406.1f2b675c,"e",%progbits
+ 1394 0000 789C2B65 		.ascii	"x\234+e``(\001bE f`f`\2344\261\213\211\341\377\377\377"
+ 1394      60602801 
+ 1394      62452066 
+ 1394      6066609C 
+ 1394      34B18B89 
+ 1395 0018 F52C4C8C 		.ascii	"\365,L\214\215*\214[\031\301lF\206z&\306z\306\311\314"
+ 1395      8D2A8C5B 
+ 1395      19C16C46 
+ 1395      867A26C6 
+ 1395      7AC6C9CC 
+ 1396 002c 9A0D0D0D 		.ascii	"\232\015\015\015?\226\316\233q\222\261a\305\001\306"
+ 1396      3F96CE9B 
+ 1396      7192B161 
+ 1396      C501C6
+ 1397 003b 25CC0C0C 		.ascii	"%\314\014\014\363\230\031`\200\015\306c\004\342\365"
+ 1397      F3981960 
+ 1397      800DC663 
+ 1397      04E2F5
+ 1398 004a 97580F34 		.ascii	"\227X\0174\374\371\337\337\320\360\365\021\343,M&\006"
+ 1398      FCF9DFDF 
+ 1398      D0F0F511 
+ 1398      E32C4D26 
+ 1398      06
+ 1399 005b 867E6690 		.ascii	"\206~f\220\301` \017T1\201\231\011\301ed\370\304\330"
+ 1399      C160200F 
+ 1399      54318199 
+ 1399      09C16564 
+ 1399      F8C4D8
+ 1400 006e A40036A5 		.ascii	"\244\0006\245\237\231\021Y\031\003\203\231\263U\214"
+ 1400      9F991159 
+ 1400      19038399 
+ 1400      B3558C
+ 1401 007d 73466652 		.ascii	"sFfRfpIiJf~Ly~QvqAbrj|iqjQLP\210np\210\257\261\221\273"
+ 1401      66704969 
+ 1401      4A667E4C 
+ 1401      797E5176 
+ 1401      71416272 
+ 1402 00a1 89B94990 		.ascii	"\211\271I\220\253\256_\250\263\217\253\277\231\011\203"
+ 1402      ABAE5FA8 
+ 1402      B38FABBF 
+ 1402      990983
+ 1403 00b0 B59E9E3E 		.ascii	"\265\236\236>\020%\203t\346\027\033\031\032\032\352"
+ 1403      10258374 
+ 1403      E6171B19 
+ 1403      1A1AEA
+ 1404 00bf E717EB67 		.ascii	"\347\027\353g$\346\350'\345'\026\245\024\353\007\207"
+ 1404      24E6E827 
+ 1404      E52716A5 
+ 1404      14EB0787 
+ 1405 00cf C4C314C7 		.ascii	"\304\303\024\307C4Cd\364\222\031\000\021\012^\212"
+ 1405      43344364 
+ 1405      F4921900 
+ 1405      110A5E8A 
+ 1406              		.text
+ 1407              		.section	.gnu.lto_.symbol_nodes.1f2b675c,"e",%progbits
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 37
+
+
+ 1408 0000 789C3362 		.ascii	"x\2343bd```\232\314\\\317\360\037\012\344\031'\234c"
+ 1408      64606060 
+ 1408      9ACC5CCF 
+ 1408      F01F0AE4 
+ 1408      19279C63 
+ 1409 0014 60A86760 		.ascii	"`\250g`\330\323\330\330h\300\000\222\007\252\230\302"
+ 1409      D8D3D8D8 
+ 1409      68C00092 
+ 1409      07AA98C2 
+ 1410 0024 5CCF8857 		.ascii	"\\\317\210W\005\353$f\2066'\006\006f\246\251\314\365"
+ 1410      05EB2466 
+ 1410      86362706 
+ 1410      0666A6A9 
+ 1410      CCF5
+ 1411 0036 4C184AF7 		.ascii	"L\030J\367562\302\314\232\306\\\317\214O\001\343t\346"
+ 1411      353632C2 
+ 1411      CC9AC65C 
+ 1411      CF8C4F01 
+ 1411      E374E6
+ 1412 0049 7A165405 		.ascii	"z\026T\005\014\014\015\015\015 YfF$\207.\346C\341\036"
+ 1412      0C0C0D0D 
+ 1412      0D205966 
+ 1412      4624872E 
+ 1412      E643E11E 
+ 1413 005d 46E53E46 		.ascii	"F\345>F\3456\363\243\352E\345\036F\345>\346gfF\362\257"
+ 1413      E536F3A3 
+ 1413      EA45E51E 
+ 1413      46E53EE6 
+ 1413      676646F2 
+ 1414 0072 3233332B 		.ascii	"233+\202\347\314\000\000\274\321\2215"
+ 1414      82E7CC00 
+ 1414      00BCD191 
+ 1414      35
+ 1415              		.text
+ 1416              		.section	.gnu.lto_.refs.1f2b675c,"e",%progbits
+ 1417 0000 789C9367 		.ascii	"x\234\223g```gdb\222d`b\222\002bi \226\001bY \226\003"
+ 1417      60606067 
+ 1417      64629264 
+ 1417      60629202 
+ 1417      62692096 
+ 1418 001a 62790606 		.ascii	"by\006\006\000\0221\001\010"
+ 1418      00123101 
+ 1418      08
+ 1419              		.text
+ 1420              		.section	.gnu.lto_.decls.1f2b675c,"e",%progbits
+ 1421 0000 789CC598 		.ascii	"x\234\305\230{PU\307\035\307\367\267{\337\222@\0036"
+ 1421      7B5055C7 
+ 1421      1DC7F7B7 
+ 1421      7BDF9240 
+ 1421      0336
+ 1422 0012 996927C3 		.ascii	"\231i'\303XS\231\266z\303\325jL\2473\352\005\037\023"
+ 1422      585399B6 
+ 1422      7AC3D56A 
+ 1422      4CA733EA 
+ 1422      051F13
+ 1423 0025 23CCC5B4 		.ascii	"#\314\305\264\323Nf\030\302\305\300\004\274\00405\323"
+ 1423      D34E6618 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 38
+
+
+ 1423      C2C5C004 
+ 1423      BC043035 
+ 1423      D3
+ 1424 0036 E9CC093E 		.ascii	"\351\314\011>Pc\020_\021c\252\030\233H\2421\304DC|\242"
+ 1424      5063105F 
+ 1424      1163AA18 
+ 1424      9B48A231 
+ 1424      C444437C 
+ 1425 004b 62B8A022 		.ascii	"b\270\240\"\276\022\004\005\015>\256\210\212\257H\360"
+ 1425      BE120405 
+ 1425      0D3EAE88 
+ 1425      8AAF48F0 
+ 1426 005b D5DFEE39 		.ascii	"\325\337\3569w\317=\0345\231\376\3233\376\356\331\335"
+ 1426      77CF3D1C 
+ 1426      3599FED3 
+ 1426      33FEEED9 
+ 1426      DD
+ 1427 006c F3D9EFEF 		.ascii	"\363\331\357\357\267\277}\234\203\331\375\011\211\267"
+ 1427      B7BF7D9C 
+ 1427      83D9FD09 
+ 1427      89B7
+ 1428 007a 10124309 		.ascii	"\020\022C\011\271\217\227\215\020r\210\350\227\025-"
+ 1428      B98F978D 
+ 1428      107288E8 
+ 1428      97152D
+ 1429 0089 88B60FED 		.ascii	"\210\266\017\355\000\332A\3559\240Y\200\030.'j0\274"
+ 1429      00DA41ED 
+ 1429      39A05980 
+ 1429      182E276A 
+ 1429      30BC
+ 1430 009b 0F42EB46 		.ascii	"\017B\353Fc\370\374q\274_B\273\202v\001-\204v\021\255"
+ 1430      63F8FC71 
+ 1430      BC5F42BB 
+ 1430      8276012D 
+ 1430      847611AD 
+ 1431 00af 0BAD13AD 		.ascii	"\013\255\023\255\227\250bw\361v\033\355\036\257b\375"
+ 1431      97A86277 
+ 1431      F1761BED 
+ 1431      1EAF62FD 
+ 1432 00bf 3E79F0B5 		.ascii	">y\360\265\020\237\271\360\236\215\366\004Z\034\332"
+ 1432      109FB9F0 
+ 1432      9E8DF604 
+ 1432      5A1CDA
+ 1433 00ce 106C7B16 		.ascii	"\020l{\026T\277n\274'\242\015F\263k\376\271\357g@\365"
+ 1433      54BF6EBC 
+ 1433      27A20D46 
+ 1433      B36BFEB9 
+ 1433      EF6740F5 
+ 1434 00e2 9F006A0C 		.ascii	"\237\000j\014\203@\215\3437\240\3062\000\324x~\017j"
+ 1434      83408DE3 
+ 1434      37A0C632 
+ 1434      00D4787E 
+ 1434      0F6A
+ 1435 00f4 BCBF0375 		.ascii	"\274\277\003u\214\301\007\304\260L\323\215\214a\220"
+ 1435      8CC107C4 
+ 1435      B04CD38D 
+ 1435      8C6190
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 39
+
+
+ 1436 0103 165B99E6 		.ascii	"\026[\231\346w\021\250q-\0065\017K\264\030\353\210\032"
+ 1436      7711A871 
+ 1436      2D06350F 
+ 1436      4BB418EB 
+ 1436      881A
+ 1437 0115 FF5C2CFF 		.ascii	"\377\\,\377\013\255\004\036\235\003\252\345>\370\220"
+ 1437      0BAD041E 
+ 1437      9D03AAE5 
+ 1437      3EF890
+ 1438 0124 9CAF0035 		.ascii	"\234\257\0005\347<\226\245Xn\320\332\2316_\373\210q"
+ 1438      E73C96A5 
+ 1438      586ED0DA 
+ 1438      99365FFB 
+ 1438      8871
+ 1439 0136 3EC3D72A 		.ascii	">\303\327*m|\331Z\235\227\017>\200[\301\350\331\243"
+ 1439      6D7CD95A 
+ 1439      9D970F3E 
+ 1439      805BC1E8 
+ 1439      D9A3
+ 1440 0148 6D75AEB3 		.ascii	"mu\256\263\252_\213\037\000\232\207\343\217\213\374"
+ 1440      AA5F8B1F 
+ 1440      009A87E3 
+ 1440      8F8BFC
+ 1441 0157 9D913885 		.ascii	"\235\2218\205*\324\346g\324\305\\\314\357\012\302\323"
+ 1441      2AD4E667 
+ 1441      D4C55CCC 
+ 1441      EF0AC2D3 
+ 1442 0167 0937D828 		.ascii	"\0117\330(\007M\210v9*\367@\214\313\352\2404d\367\273"
+ 1442      074D8876 
+ 1442      392AF740 
+ 1442      8CCBEAA0 
+ 1442      3464F7BB 
+ 1443 017b 127A613D 		.ascii	"\022za=\255\260\305\217R,\376\371\375Cv\205\226M\212"
+ 1443      ADB0C58F 
+ 1443      522CFEF9 
+ 1443      FD437685 
+ 1443      964D8A
+ 1444 018e 1B3A0A7F 		.ascii	"\033:\012\177C\366 \370\261W\252\305\021\203\245\220"
+ 1444      43F620F8 
+ 1444      B157AAC5 
+ 1444      1183A590 
+ 1445 019e DD758355 		.ascii	"\335u\203U\274c\363\037\240s\006A\020\\~O\234\242(\243"
+ 1445      BC63F31F 
+ 1445      A0730641 
+ 1445      105C7E4F 
+ 1445      9CA228A3 
+ 1446 01b2 1C8EA7A3 		.ascii	"\034\216\247\243w\263\335l,!\016G\325\206\376\256\220"
+ 1446      77B3DD6C 
+ 1446      2C210E47 
+ 1446      D586FEAE 
+ 1446      90
+ 1447 01c3 3D1A2512 		.ascii	"=\032%\022\374\3611\376\370\350 X\375~W\\\002\301 \374"
+ 1447      FCF131FE 
+ 1447      F8E82058 
+ 1447      FD7E575C 
+ 1447      02C120FC 
+ 1448 01d7 1ECF28EA 		.ascii	"\036\317(\352Be\213#\010\036\006Q\036\345\364\305']"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 40
+
+
+ 1448      42658B23 
+ 1448      081E0651 
+ 1448      1EE5F4C5 
+ 1448      275D
+ 1449 01e9 5697F3E9 		.ascii	"V\227\363\351\370\004B\374d,E]v?|\201\035}\372\365*"
+ 1449      F80442FC 
+ 1449      642C455D 
+ 1449      763F7C81 
+ 1449      1D7DFAF5 
+ 1450 01fe 40828B7A 		.ascii	"@\202\213z({!d\307\364\323xB\024\213#*\012\024\2749"
+ 1450      287B2164 
+ 1450      C7F4D378 
+ 1450      42148B23 
+ 1450      2A0A14BC 
+ 1451 0213 D35FF0A7 		.ascii	"\323_\360\247z\\$d\247\370(\316\002\012\005\275\247"
+ 1451      7A5C2464 
+ 1451      A7F828CE 
+ 1451      020A05BD 
+ 1451      A7
+ 1452 0224 CB8669A4 		.ascii	"\313\206i\2442\237@\014s\305+:K\364\347\024\302\217"
+ 1452      329F400C 
+ 1452      73C52B3A 
+ 1452      4BF4E714 
+ 1452      C28F
+ 1453 0236 55AECF0C 		.ascii	"U\256\317\014kZ\242\035\244~\270\203\336-B\034\372t"
+ 1453      6B5AA21D 
+ 1453      A47EB883 
+ 1453      DE2D421C 
+ 1453      FA74
+ 1454 0248 077EF1DF 		.ascii	"\007~\361\337\310\016z\214\322?\225a\201\216\364\011"
+ 1454      C80E7A8C 
+ 1454      D23F9561 
+ 1454      818EF409 
+ 1455 0258 5CA84038 		.ascii	"\\\250@8 \363\305\302\313f\327\342\326\022\3539L\233"
+ 1455      20F3C5C2 
+ 1455      CB66D7E2 
+ 1455      D612EB39 
+ 1455      4C9B
+ 1456 026a 521E07FD 		.ascii	"R\036\007\375\313F\021`\277\"\354\031\342V\304U\\@\340"
+ 1456      CB461160 
+ 1456      BF22EC19 
+ 1456      E256C455 
+ 1456      5C40E0
+ 1457 027d 2B5521A7 		.ascii	"+U!\247\337\"\006O\200\005\177\343 \036\273\266\316"
+ 1457      DF22064F 
+ 1457      80057FE3 
+ 1457      201EBBB6 
+ 1457      CE
+ 1458 028e FABC1462 		.ascii	"\372\274\024bU\256F\033\347V\200j^d\377\344\342\241"
+ 1458      55AE461B 
+ 1458      E756806A 
+ 1458      5E64FFE4 
+ 1458      E2A1
+ 1459 02a0 4367BAAD 		.ascii	"Cg\272\255\202\250\321\010\330\006\222A\340\370\366"
+ 1459      82A8D108 
+ 1459      D8069241 
+ 1459      E0F8F6
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 41
+
+
+ 1460 02af D31B6954 		.ascii	"\323\033iT\215\242t+\025\273-\260\035`\013\300\327<"
+ 1460      8DA2742B 
+ 1460      15BB2DB0 
+ 1460      1D600BC0 
+ 1460      D73C
+ 1461 02c1 EA1D2080 		.ascii	"\352\035 \200\017z7\337}\314BD\003\004\036\342\264&"
+ 1461      0F7A37DF 
+ 1461      7DCC4244 
+ 1461      03041EE2 
+ 1461      B426
+ 1462 02d3 EC740EF0 		.ascii	"\354t\016\360>\307\232\203\245\321\006\004v\201\204"
+ 1462      3EC79A83 
+ 1462      A5D10604 
+ 1462      768184
+ 1463 02e2 1038BC7D 		.ascii	"\0208\274}\345\021\213\356u\267\356u\217\352\265[Y\322"
+ 1463      E5118BEE 
+ 1463      75B7EE75 
+ 1463      8FEAB55B 
+ 1463      59D2
+ 1464 02f4 CE84D73D 		.ascii	"\316\204\327=\000;A\214\233\212q\307\340\323\312\257"
+ 1464      003B418C 
+ 1464      9B8A71C7 
+ 1464      E0D3CAAF 
+ 1465 0304 2BD6589F 		.ascii	"+\326X\237D\361.E\211\203l\370\006`/\357\\\207\371\256"
+ 1465      44F12E45 
+ 1465      89836CF8 
+ 1465      06602FEF 
+ 1465      5C87F9AE 
+ 1466 0318 C5C280B2 		.ascii	"\305\302\200\2622\245\247u^c\307\240\3033J\224&\036"
+ 1466      32A5A775 
+ 1466      5E63C7A0 
+ 1466      C3334A94 
+ 1466      261E
+ 1467 032a 06F0A7B0 		.ascii	"\006\360\247\260Y\013\201`\211\300&\200/!\247\323\311"
+ 1467      590B8160 
+ 1467      89C02680 
+ 1467      2F21A7D3 
+ 1467      C9
+ 1468 033b E650EEB3 		.ascii	"\346P\356\263dk\351>\327\003T\033\020\015\250\242U["
+ 1468      646BE93E 
+ 1468      D703541B 
+ 1468      100DA8A2 
+ 1468      555B
+ 1469 034d 66952831 		.ascii	"f\225(1\305\310X\260\031\352\245\\\275\224\373\336\311"
+ 1469      C5C858B0 
+ 1469      19EAA55C 
+ 1469      BD94FBDE 
+ 1469      C9
+ 1470 035e CA85DC97 		.ascii	"\312\205\334\227sk+\243\006\224\227)\335\237\324\275"
+ 1470      736B2BA3 
+ 1470      06949729 
+ 1470      DD9FD4BD 
+ 1471 036e 5EC9F726 		.ascii	"^\311\367&\357\262_v\331/\273\2648\331\207\242Kg\355"
+ 1471      EFB25F76 
+ 1471      D92FBBB4 
+ 1471      38D987A2 
+ 1471      4B67ED
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 42
+
+
+ 1472 0381 FA27788F 		.ascii	"\372'x\217\252\362\271\221n\032e\237F\331\347\220\223"
+ 1472      AAF2B991 
+ 1472      6E1A659F 
+ 1472      46D9E790 
+ 1472      93
+ 1473 0392 7D26FAEC 		.ascii	"}&\372\354\331\264\276\3319\240\\Qz\312\336m\276\025"
+ 1473      D9B4BED9 
+ 1473      39A05C51 
+ 1473      7ACADE6D 
+ 1473      BE15
+ 1474 03a4 BF6B4645 		.ascii	"\277kFE\002\357\323$\3734\211\033\353\245Dd\261\026"
+ 1474      02EFD324 
+ 1474      FB34891B 
+ 1474      EBA54464 
+ 1474      B116
+ 1475 03b6 441A2BA2 		.ascii	"D\032+\242D\255RM\355\257E\333)\2652\007X)S\341\247"
+ 1475      44AD524D 
+ 1475      EDAF45DB 
+ 1475      29B53207 
+ 1475      582953E1 
+ 1476 03cb C46F0C5B 		.ascii	"\304o\014[*\352\203\304\036\216\026%\302\336c\334}\327"
+ 1476      2AEA83C4 
+ 1476      1E8E1625 
+ 1476      C2DE63DC 
+ 1476      7DD7
+ 1477 03dd DE0BFB1F 		.ascii	"\336\013\373\037s\211\231\254\231\351$\332<B; S\015"
+ 1477      738999AC 
+ 1477      99E924DA 
+ 1477      3C423B20 
+ 1477      530D
+ 1478 03ef D0067012 		.ascii	"\320\006p\022\330\032M\316\301\3262\302>E\333\204\266"
+ 1478      D81A4DCE 
+ 1478      C1D632C2 
+ 1478      3E45DB84 
+ 1478      B6
+ 1479 0400 0D6D3717 		.ascii	"\015m7\027\211\231\035\272\271\3006P\\\261\003Q\253"
+ 1479      89991DBA 
+ 1479      B9C03650 
+ 1479      5CB10351 
+ 1479      AB
+ 1480 0411 A7BAF444 		.ascii	"\247\272\364D\301\373(\030\2051A\007\300e}\201|\317"
+ 1480      C1FB2818 
+ 1480      85314107 
+ 1480      C0657D81 
+ 1480      7CCF
+ 1481 0423 7FB60041 		.ascii	"\177\266\000A\254\252\265ZQ\234\2029cf\022\005\322."
+ 1481      ACAAB55A 
+ 1481      519C8239 
+ 1481      63661205 
+ 1481      D22E
+ 1482 0435 91F306A4 		.ascii	"\221\363\006\244EGNJ\344\264\001i\325\2216\211\2340"
+ 1482      45474E4A 
+ 1482      E4B40169 
+ 1482      D5913689 
+ 1482      9C30
+ 1483 0447 235A30C7 		.ascii	"#Z0\307%s\316\300\270\205\012\316\345L\334\014\026\002"
+ 1483      2573CEC0 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 43
+
+
+ 1483      B8850ACE 
+ 1483      E54CDC0C 
+ 1483      1602
+ 1484 0459 DF017CCB 		.ascii	"\337\001|\313\333/\363\031\202K\000W\000.\000\204\000"
+ 1484      DB2FF319 
+ 1484      824B0057 
+ 1484      002E0084 
+ 1484      00
+ 1485 046a 2E027401 		.ascii	".\002t\001t\362\371\342\202-R\360\254Ip\213\330g\313"
+ 1485      74F2F9E2 
+ 1485      822D52F0 
+ 1485      AC49708B 
+ 1485      D867CB
+ 1486 047d D6EEAA70 		.ascii	"\326\356\252p\305\366\225\346;\374\221\342b.\272\011"
+ 1486      C5F695E6 
+ 1486      3BFC91E2 
+ 1486      622EBA09 
+ 1487 048d ABD3A6A5 		.ascii	"\253\323\246\245\211\260F\255\370\034;\206\263r\002"
+ 1487      89B046AD 
+ 1487      F81C3B86 
+ 1487      B37202
+ 1488 049c AD03AD53 		.ascii	"\255\003\255S\314N\260\344\363\220\223\317\014\277\320"
+ 1488      CC4EB0E4 
+ 1488      F39093CF 
+ 1488      0CBFD0
+ 1489 04ab 59D59562 		.ascii	"Y\325\225b\021X7@\017\300\035\220#\222#\255\232\263"
+ 1489      11583740 
+ 1489      0FC01D90 
+ 1489      239223AD 
+ 1489      9AB3
+ 1490 04bd 46516266 		.ascii	"FQbf\012\344\206\001\271\256%L\217\371(\300\021\336"
+ 1490      0AE48601 
+ 1490      B9AE254C 
+ 1490      8FF928C0 
+ 1490      11DE
+ 1491 04cf 784744DC 		.ascii	"xGD\334\013\374Uq\027\3406\300=\200\267\360\265\301"
+ 1491      0BFC5571 
+ 1491      17E036C0 
+ 1491      3D80B7F0 
+ 1491      B5C1
+ 1492 04e1 23E69A77 		.ascii	"#\346\232w\245\327\037\014\2227A\272}[w{\315\300\\\325"
+ 1492      A5D71F0C 
+ 1492      923741BA 
+ 1492      7D5B777B 
+ 1492      CDC05CD5 
+ 1493 04f5 99E53AF3 		.ascii	"\231\345:\363\243\2019\2463\275\322\325-\003\322\242"
+ 1493      A38139A6 
+ 1493      33BDD2D5 
+ 1493      2D03D2A2 
+ 1494 0505 475F55AA 		.ascii	"G_U\252\353\0347@\315\032\304\256\212\0152?x\264\315"
+ 1494      EB1C3740 
+ 1494      CD1AC4AE 
+ 1494      8A0D323F 
+ 1494      78B4CD
+ 1495 0518 21E6A826 		.ascii	"!\346\250&b\274PL\037=\342g\226\340\301\261mFJ\031\300"
+ 1495      62BC504C 
+ 1495      1F3DE267 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 44
+
+
+ 1495      96E0C1B1 
+ 1495      6D464A19 
+ 1496 052d 0C0A8705 		.ascii	"\014\012\207\005\032N\025\326\246\346\354u\212\011\213"
+ 1496      1A4E15D6 
+ 1496      A6E6EC75 
+ 1496      8A098B
+ 1497 053c 67F7859B 		.ascii	"g\367\205\233\3315\347\233\034\256S\217\336\2073-\204"
+ 1497      D935E79B 
+ 1497      1CAE538F 
+ 1497      DE87332D 
+ 1497      84
+ 1498 054d CD435B80 		.ascii	"\315C[\200\266\020m\261\205\317\372oq[3q'l\271\205\213"
+ 1498      B6106DB1 
+ 1498      85CFFA6F 
+ 1498      715B3371 
+ 1498      276CB985 
+ 1499 0562 DD9A5DB9 		.ascii	"\335\232]\271\262\037\337\324]JM\261\225h'!,\240\310"
+ 1499      B21FDFD4 
+ 1499      5D4A4DB1 
+ 1499      95682721 
+ 1499      2CA0C8
+ 1500 0575 A0582985 		.ascii	"\240X)\205w(\373\200\243\266\243\207\336k\241\261b]"
+ 1500      7728FB80 
+ 1500      A3B6A387 
+ 1500      DE6BA1B1 
+ 1500      625D
+ 1501 0587 F009A544 		.ascii	"\360\011\245D.\323E\224\263\213),\241\352\202n~\277"
+ 1501      2ED34594 
+ 1501      B38B292C 
+ 1501      A1EA826E 
+ 1501      7EBF
+ 1502 0599 A3ECBC4D 		.ascii	"\243\354\274M\251\304\367@\031\205\205\224\023\3413"
+ 1502      A9C4F740 
+ 1502      19858594 
+ 1502      13E133
+ 1503 05a8 D62DB7DA 		.ascii	"\326-\267\332\366\216\331x\364Eqd\276\011\371\206/{"
+ 1503      F68ED978 
+ 1503      F4457164 
+ 1503      BE09F986 
+ 1503      2F7B
+ 1504 05ba DBDE8AA6 		.ascii	"\333\336\212\246\300\300\201\374s\247{G\207\225\353"
+ 1504      C0C081FC 
+ 1504      73A77B47 
+ 1504      8795EB
+ 1505 05c9 21F63685 		.ascii	"!\3666\205e\264\317\246\343\307\322\2265\245\217\227"
+ 1505      65B4CFA6 
+ 1505      E3C7D296 
+ 1505      35A58F97 
+ 1506 05d9 BDC5F836 		.ascii	"\275\305\3706\232\367\000\204\213\250\0131\334\276L"
+ 1506      9AF70084 
+ 1506      8BA80B31 
+ 1506      DCBE4C
+ 1507 05e8 C4FD2E85 		.ascii	"\304\375.\205\245T}Y]\256\336\263\340\361\270\212\237"
+ 1507      A5547D59 
+ 1507      5DAEDEB3 
+ 1507      E0F1B88A 
+ 1507      9F
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 45
+
+
+ 1508 05f9 00D9194C 		.ascii	"\000\331\031Lh\010\255\013\355\032Z/\332[Vu[%\210\363"
+ 1508      6808AD0B 
+ 1508      ED1A5A2F 
+ 1508      DA5B5675 
+ 1508      5B2588F3 
+ 1509 060d B586B212 		.ascii	"\265\206\262\022+*\376\362J\373\302\357\242\325\323"
+ 1509      2B2AFEF2 
+ 1509      4AFBC2EF 
+ 1509      A2D5D3
+ 1510 061c 4E5CA771 		.ascii	"N\\\247q\334\365\370\246\342\353\251\204\302l\012\037"
+ 1510      DCF5F8A6 
+ 1510      E2EBA984 
+ 1510      C26C0A1F 
+ 1511 062c E971CEA2 		.ascii	"\351q\316\242\"P\316T\353\314r\003\023>\207Vc\220;\327"
+ 1511      2250CE54 
+ 1511      EBCC7203 
+ 1511      133E8756 
+ 1511      63903BD7 
+ 1512 0640 BC1EC494 		.ascii	"\274\036\304\224\224S\230k`\264\023\017u\272\327k9A"
+ 1512      9453986B 
+ 1512      60B4130F 
+ 1512      75BAD76B 
+ 1512      3941
+ 1513 0652 9D7F1B18 		.ascii	"\235\177\033\030w\337\335YAa\025\367\377\221\030\353"
+ 1513      77DFDD59 
+ 1513      416115F7 
+ 1513      FF9118EB 
+ 1514 0662 27143EA4 		.ascii	"'\024>\244PIa-\305\317TXC\341?\024>\246\360\001\205"
+ 1514      5049612D 
+ 1514      C5CF5458 
+ 1514      43E13F14 
+ 1514      3EA6F001 
+ 1515 0677 753C073C 		.ascii	"u<\007<\306\015z\214+\014\332\341\203\233C\237\352\320"
+ 1515      C60D7A8C 
+ 1515      2B0CDAE1 
+ 1515      839B439F 
+ 1515      EAD0
+ 1516 0689 FB66481D 		.ascii	"\373fH\035lPg\346\230\007\242\011\255\323\241\225\246"
+ 1516      6C5067E6 
+ 1516      9807A209 
+ 1516      ADD3A195 
+ 1516      A6
+ 1517 069a 91A83A0D 		.ascii	"\221\250:\015:\262\332\234XM\3473\035z\317\234\331D"
+ 1517      3AB2DA9C 
+ 1517      584DE733 
+ 1517      1D7ACF9C 
+ 1517      D944
+ 1518 06ac B191CF6C 		.ascii	"\261\221\317l\330i\217\355\233\032\376a\363\363\222"
+ 1518      D8698FED 
+ 1518      9B1AFE61 
+ 1518      F3F392
+ 1519 06bb 8312D797 		.ascii	"\203\022\327\227w\256\216\370\354\371Tw\263\201Kp\244"
+ 1519      77AE8EF8 
+ 1519      ECF95477 
+ 1519      B3814B70 
+ 1519      A4
+ 1520 06cc A562636D 		.ascii	"\245bcm\344q\3613\217t\354\271\272\351\300\017L\027"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 46
+
+
+ 1520      E471F133 
+ 1520      8F74ECB9 
+ 1520      BAE9C00F 
+ 1520      4C17
+ 1521 06de FF4C17AF 		.ascii	"\377L\027\257\242\002\270q\347\360F&^\3255\017=\"\304"
+ 1521      A202B871 
+ 1521      E7F04626 
+ 1521      5ED5350F 
+ 1521      3D22C4
+ 1522 06f1 6A2D0736 		.ascii	"j-\0076_[\270e\300\026Y\011{\027m\005\332\207Z\263\002"
+ 1522      5F5BB865 
+ 1522      C0165909 
+ 1522      7B176D05 
+ 1522      DA875AB3 
+ 1523 0706 6C1D5637 		.ascii	"l\035V7i\325\036\302vb\265\001\355\030Z\273\326\034"
+ 1523      69D51EC2 
+ 1523      7662B501 
+ 1523      ED185ABB 
+ 1523      D61C
+ 1524 0718 22EC0256 		.ascii	"\"\354\002V\257k\325S\204\335\305j\211M\2556\3439d#"
+ 1524      AF6BD553 
+ 1524      84DDC56A 
+ 1524      894DAD36 
+ 1524      E3396423 
+ 1525 072c AC1C6D35 		.ascii	"\254\034m5\332:\2559H\330\027X\335\252Uk\010\333\203"
+ 1525      DA3AAD39 
+ 1525      48D81758 
+ 1525      DDAA556B 
+ 1525      08DB83
+ 1526 073f D50368DF 		.ascii	"\325\003h\337\242\235\322\232\237e\235X\273\201v\027"
+ 1526      A29DD29A 
+ 1526      9F659D58 
+ 1526      BB817617 
+ 1527 074f 6DB61DB5 		.ascii	"m\266\035\265\320\226\243\255D[\203V\211\266\021m\033"
+ 1527      D096A3AD 
+ 1527      445B8356 
+ 1527      89B6116D 
+ 1527      1B
+ 1528 0760 5A2D5A3D 		.ascii	"Z-Z=\332A\273\332\273B\375\006R\\\354\260\0353\343["
+ 1528      DA41BBDA 
+ 1528      BB42FD06 
+ 1528      525CECB0 
+ 1528      1D33E35B 
+ 1529 0774 BBB9F85C 		.ascii	"\273\271\370\\\364@y\305\016|\344\205\353\245\347\332"
+ 1529      F44079C5 
+ 1529      0E7CE485 
+ 1529      EBA5E7DA 
+ 1530 0784 BD8A76DB 		.ascii	"\275\212v\333\307\370\202\236\373\024_3\333)t\353\371"
+ 1530      C7F8829E 
+ 1530      FB145F33 
+ 1530      DB2974EB 
+ 1530      F9
+ 1531 0795 DE16B1B0 		.ascii	"\336\026\261\260\266m\312\347\273\021\231\323\006\306"
+ 1531      B66DCAE7 
+ 1531      BB1199D3 
+ 1531      06C6
+ 1532 07a3 AD235B25 		.ascii	"\255#[%\362\275\011Q\227\360II4\032\210\375T\036\233"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 47
+
+
+ 1532      F2BD0951 
+ 1532      97F04949 
+ 1532      341A88FD 
+ 1532      541E9B
+ 1533 07b6 4115C153 		.ascii	"A\025\301S\356\244\001i\215\330,-R\346\260\201\271\031"
+ 1533      EEA40169 
+ 1533      8DD82C2D 
+ 1533      52E6B081 
+ 1533      B919
+ 1534 07c8 C15C904C 		.ascii	"\301\\\220L\275\201\251\323"
+ 1534      BD81A9D3 
+ 1535 07d0 4FA1DB12 		.ascii	"O\241\333\022\331j@\276\326\2219_\205\221M\006\344K"
+ 1535      D96A40BE 
+ 1535      D691395F 
+ 1535      85914D06 
+ 1535      E44B
+ 1536 07e2 AA7F2FED 		.ascii	"\252\177/\355\224\021\267\231#\216\374`:C\241\203\367"
+ 1536      9411B799 
+ 1536      238EFC60 
+ 1536      3A43A183 
+ 1536      F7
+ 1537 07f3 EB16DB2C 		.ascii	"\353\026\333,D\341<\005<\274\256Q\270B\241\023O\007"
+ 1537      44E13C05 
+ 1537      3CBCAE51 
+ 1537      B842A113 
+ 1537      4F07
+ 1538 0805 063729DC 		.ascii	"\0067)\334\300\027*\205R\006s\031\334\247\360#\036\243"
+ 1538      C0172A85 
+ 1538      52067319 
+ 1538      DCA7F023 
+ 1538      1EA3
+ 1539 0817 0C2E5298 		.ascii	"\014.R\230\311\340*\205\013\370\212\245P\314\340\026"
+ 1539      C9E02A85 
+ 1539      0BF88AA5 
+ 1539      50CCE016 
+ 1540 0827 852E0AD7 		.ascii	"\205.\012\327)\314c0\203\301|<\004\031\334\243\320C"
+ 1540      29CC6330 
+ 1540      83C17C3C 
+ 1540      0419DCA3 
+ 1540      D043
+ 1541 0839 E1368573 		.ascii	"\3416\205s\024.QP\030\364R\370\001\337)\014.S\230\305"
+ 1541      142E5150 
+ 1541      18F452F8 
+ 1541      01DF290C 
+ 1541      2E5398C5 
+ 1542 084d E01DA67D 		.ascii	"\340\035\246}\223\235\220A7\031\202>\0301\345;d~\332"
+ 1542      939D9041 
+ 1542      3719823E 
+ 1542      1831E53B 
+ 1542      647EDA
+ 1543 0860 0D4CE401 		.ascii	"\015L\344\001\330)\231\2409\315\032\263O2-\006&\342"
+ 1543      D82999A0 
+ 1543      39CD1AB3 
+ 1543      4F322D06 
+ 1543      26E2
+ 1544 0872 85D02091 		.ascii	"\205\320 \221V\003\022>\"y\310\367d\310_\031\230\346"
+ 1544      5603123E 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 48
+
+
+ 1544      2279C8F7 
+ 1544      64C85F19 
+ 1544      98E6
+ 1545 0884 08262499 		.ascii	"\010&$\231\006\003s=\202\351\221\314N\003s5\202i\226"
+ 1545      0603733D 
+ 1545      82E991CC 
+ 1545      4E037335 
+ 1545      826996
+ 1546 0897 CC310373 		.ascii	"\3141\003s4bXwe\314\325\346x\324a\375(\221\035\346\215"
+ 1546      34625877 
+ 1546      65CCD5E6 
+ 1546      78D461FD 
+ 1546      28911DE6 
+ 1547 08ac A5AEF7FD 		.ascii	"\245\256\367\375\322\323qsr4OmR\346\200y\333h\314\025"
+ 1547      D2D37173 
+ 1547      72344F6D 
+ 1547      52E68079 
+ 1547      DB68CC15 
+ 1548 08c0 C9D49847 		.ascii	"\311\324\230G\245FsP\"\337\232\007\245FsGF\263\305\274"
+ 1548      A5467350 
+ 1548      22DF9A07 
+ 1548      A5467347 
+ 1548      46B3C5BC 
+ 1549 08d4 25344FDB 		.ascii	"%4O\333\245\314)\363\262P=\265Kd\237y\032TO]\322\323"
+ 1549      A5CC29F3 
+ 1549      B2503DB5 
+ 1549      4B649F79 
+ 1549      1A544F5D 
+ 1550 08ea 5E03521B 		.ascii	"^\003R\033\341\251U\312\0342/R\325\323\\\271A\2770 "
+ 1550      E1A955CA 
+ 1550      1C322F52 
+ 1550      D5D35CB9 
+ 1550      41BF3020 
+ 1551 08fe 1B75E4B8 		.ascii	"\033u\344\270T9b>-T\344\262Dv\033\220]\021\301\324K"
+ 1551      5439623E 
+ 1551      2D54E4B2 
+ 1551      44761B90 
+ 1551      5D11C1D4 
+ 1552 0913 E6847989 		.ascii	"\346\204y\211\2522\215\022\371\316\200\254\212\220\271"
+ 1552      AA328D12 
+ 1552      F9CE80AC 
+ 1552      8A90B9
+ 1553 0922 28996FCC 		.ascii	"(\231o\314\343Ve\356Kd\263\371\320Q\221K\022\331c\016"
+ 1553      E35665EE 
+ 1553      4B64B3F9 
+ 1553      D051914B 
+ 1553      12D9630E 
+ 1554 0936 5845E6C9 		.ascii	"XE\346\311\314\2345gF\013\346\200\224i6\007\234H\330"
+ 1554      CC9C3567 
+ 1554      460BE680 
+ 1554      94693607 
+ 1554      9C48D8
+ 1555 0949 52077FDF 		.ascii	"R\007\177\337v\\^\272\276_l\337s\014\026\260\377\373"
+ 1555      765C5EBA 
+ 1555      BE5F6CDF 
+ 1555      730C16B0 
+ 1555      FFFB
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 49
+
+
+ 1556 095b 49C6FFD7 		.ascii	"I\306\377\327\251\274\255\326\241\177-\22419\210\205"
+ 1556      A9BCADD6 
+ 1556      A17F2D94 
+ 1556      31398885 
+ 1557 096b 4C00B76F 		.ascii	"L\000\267o\036\271m\325\201:\375\357\317E*P\\\337\370"
+ 1557      1EB96DD5 
+ 1557      813AFDEF 
+ 1557      CF452A50 
+ 1557      5CDFF8
+ 1558 097e 07FDF90C 		.ascii	"\007\375\371\014=\013\213\325\347\347z\252W9M_2?\361"
+ 1558      3D0B8BD5 
+ 1558      E7E77AAA 
+ 1558      57394D5F 
+ 1558      323FF1
+ 1559 0991 772FF66B 		.ascii	"w/\366k8Qu;\"\262\006\335\361R\036;K\034N\234\031\005"
+ 1559      3851753B 
+ 1559      22B206DD 
+ 1559      F1521E3B 
+ 1559      4B1C4E9C 
+ 1560 09a7 796F8CC8 		.ascii	"yo\214\310\032\234G\\\231\201\202\242\254\351\203\363"
+ 1560      1A9C475C 
+ 1560      998182A2 
+ 1560      ACE983F3 
+ 1561 09b7 8611E7AB 		.ascii	"\206\021\347\253\3719\201\364\234\2519E\317\017\031"
+ 1561      F93981F4 
+ 1561      9CA93945 
+ 1561      CF0F19
+ 1562 09c6 E2C67F99 		.ascii	"\342\306\177\231\3319\257\344\004\012=\211\211\211\356"
+ 1562      D939AFE4 
+ 1562      040A3D89 
+ 1562      8989EE
+ 1563 09d5 40A13B3B 		.ascii	"@\241;;#\327\375J \243\300_\350N\233\234>\351%\357\304"
+ 1563      23D7FD4A 
+ 1563      20A3C05F 
+ 1563      E84E9B9C 
+ 1563      3EE925EF 
+ 1564 09ea E494E1C3 		.ascii	"\344\224\341\303\322\307\015\0331\314\227\254>\031\222"
+ 1564      D2C70D1B 
+ 1564      31CC97AC 
+ 1564      3E1992
+ 1565 09f9 E91837E9 		.ascii	"\351\0307\351\245xo\342\010\362\013\255a\310\310\221"
+ 1565      A5786FE2 
+ 1565      08F20BAD 
+ 1565      61C8C891 
+ 1566 0a09 235E1931 		.ascii	"#^\0311<k\012\211\022\372\205YE\323\362\323\213\242"
+ 1566      3C6B0A89 
+ 1566      12FA8559 
+ 1566      45D3F2D3 
+ 1566      8BA2
+ 1567 0a1b 0A8BF286 		.ascii	"\012\213\362\206z\322ES\321p\357\363/{\271\263\264\242"
+ 1567      7AD24553 
+ 1567      D170EFF3 
+ 1567      2F7BB9B3 
+ 1567      B4A2
+ 1568 0a2d 69FE9CC0 		.ascii	"i\376\234\300\313\377\010\024\274V\230\237\221\231\225"
+ 1568      CBFF0814 
+ 1568      BC56989F 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 50
+
+
+ 1568      919995
+ 1569 0a3c 3EAD30AB 		.ascii	">\2550\253\340e\337\344\301i\223_\034\352Q=\015\016"
+ 1569      E065DFE4 
+ 1569      C169935F 
+ 1569      1CEA513D 
+ 1569      0D0E
+ 1570 0a4e 7B267FFA 		.ascii	"{&\177\372\337\303$\321\021\376\371\220\243\322\323"
+ 1570      DFC324D1 
+ 1570      11FEF990 
+ 1570      A3D2D3
+ 1571 0a5d B3320A72 		.ascii	"\2632\012r\337\024\025\247\240&`)F\3052s\003\231\257"
+ 1571      DF1415A7 
+ 1571      A0266029 
+ 1571      46C53273 
+ 1571      0399AF
+ 1572 0a70 8947231F 		.ascii	"\211G#\037\3523\037\023\311]b\240n-\334\351\323\371"
+ 1572      EA331F13 
+ 1572      C95D62A0 
+ 1572      6E2DDCE9 
+ 1572      D3F9
+ 1573 0a82 93F4DC5C 		.ascii	"\223\364\334\\\377\220l\022+|\371\263\246dL\313-J\317"
+ 1573      FF906C12 
+ 1573      2B7CF9B3 
+ 1573      A6644CCB 
+ 1573      2D4ACF
+ 1574 0a95 0C4C9D92 		.ascii	"\014L\235\222\363\252-ulRFQ\206%cJA\256cZ\316\324\""
+ 1574      F3AA2D75 
+ 1574      6C524651 
+ 1574      8625634A 
+ 1574      41AE635A 
+ 1575 0aac F455C402 		.ascii	"\364U\304\002\376\002k\376\264|\177\201=P\230\237\225"
+ 1575      FE026BFE 
+ 1575      B47C7F81 
+ 1575      3D50989F 
+ 1575      95
+ 1576 0abd E52FB005 		.ascii	"\345/\260\005\212\336\314\317*\260\346\005\374Y\005"
+ 1576      8ADECCCF 
+ 1576      2AB0E605 
+ 1576      FC5905
+ 1577 0acc 1CCEB6A5 		.ascii	"\034\316\266\245&\363\216\266\324$\365\346Uoc\324\333"
+ 1577      26F38EB6 
+ 1577      D424F5E6 
+ 1577      556F63D4 
+ 1577      DB
+ 1578 0add 68F5368E 		.ascii	"h\3656\216\337\036\023nUw\351E\226\321c}\023\255\023"
+ 1578      DF1E136E 
+ 1578      5577E945 
+ 1578      96D1637D 
+ 1578      13AD13
+ 1579 0af0 53BC2FF8 		.ascii	"S\274/\370,c\322|>\370+\214\267f\346\342\320\205\373"
+ 1579      2C63D27C 
+ 1579      3EF82B8C 
+ 1579      B766E6E2 
+ 1579      D085FB
+ 1580 0b03 C4E1E81E 		.ascii	"\304\341\350\036g\350\317?k\224\023'&\271\307\245NH"
+ 1580      67E8CF3F 
+ 1580      6B941327 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 51
+
+
+ 1580      26B9C7A5 
+ 1580      4E48
+ 1581 0b15 79C3E3D6 		.ascii	"y\303\343\326\263\211#e)I>6!\311gM})5\311gOIKMNN\362"
+ 1581      B3892365 
+ 1581      29493E36 
+ 1581      21C9674D 
+ 1581      7D2935C9 
+ 1582 0b31 D95226FF 		.ascii	"\331R&\377-5\331g}1%)\331\307\343\030o\365\372|^\037"
+ 1582      2D35D967 
+ 1582      7D312529 
+ 1582      D9C7E318 
+ 1582      6FF5FA7C 
+ 1583 0b47 F3A6612C 		.ascii	"\363\246a,I^\237\323\227\234\226\354\373Kr\322H\253"
+ 1583      495E9FD3 
+ 1583      979C96EC 
+ 1583      FB4B72D2 
+ 1583      48AB
+ 1584 0b59 D73B2155 		.ascii	"\327;!U\257?\347\034\235:\306\223\366b\362$\237\013"
+ 1584      AF3FE71C 
+ 1584      9D3AC693 
+ 1584      F662F224 
+ 1584      9F0B
+ 1585 0b6b 4B89A2E4 		.ascii	"K\211\242\344\321\213\211\222\034\341\034=~\314P\321"
+ 1585      D18B8992 
+ 1585      1CE11C3D 
+ 1585      7ECC50D1 
+ 1586 0b7b C84B1E59 		.ascii	"\310K\036YRA\311\015\267sElqp\021\256\026.\350Z\177"
+ 1586      5241C90D 
+ 1586      B773456C 
+ 1586      717011AE 
+ 1586      162EE85A 
+ 1587 0b90 B4732D6C 		.ascii	"\264s-l\342w\217vO\214T\031\306;y|i\223}<\300D^\360"
+ 1587      E2778F76 
+ 1587      4F8C5419 
+ 1587      C63B797C 
+ 1587      69937D3C 
+ 1588 0ba8 C8922E34 		.ascii	"\310\222.4\324\301\205x\033/x\302\005AI\310c\361N\360"
+ 1588      D4C18578 
+ 1588      1B2F78C2 
+ 1588      054149C8 
+ 1588      63F14EF0 
+ 1589 0bbc FAF0672C 		.ascii	"\372\360g,\377I\326\037\350:\317\332S'N\364\216\035"
+ 1589      FF49D61F 
+ 1589      E83ACFDA 
+ 1589      53274EF4 
+ 1589      8E1D
+ 1590 0bce 8700FE58 		.ascii	"\207\000\376X'x\323\274>\352\365\331D\262<\017\336\014"
+ 1590      2778D3BC 
+ 1590      3EEAF5D9 
+ 1590      44B23C0F 
+ 1590      DE0C
+ 1591 0be0 9981BCBC 		.ascii	"\231\201\274\274\300Tw\326\364\"\234\263\210e)\346\353"
+ 1591      C05477D6 
+ 1591      F4229CB3 
+ 1591      886529E6 
+ 1591      EB
+ 1592 0bf1 55DC12D3 		.ascii	"U\334\022\323\247\343\204\365\363y\275\351\223q\211"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 52
+
+
+ 1592      A7E384F5 
+ 1592      F379BDE9 
+ 1592      937189
+ 1593 0c00 25654DF9 		.ascii	"%eM\371/h\330pZ"
+ 1593      2F68D870 
+ 1593      5A
+ 1594              		.text
+ 1595              		.section	.gnu.lto_.symtab.1f2b675c,"e",%progbits
+ 1596 0000 5F5F6561 		.ascii	"__early_init\000"
+ 1596      726C795F 
+ 1596      696E6974 
+ 1596      00
+ 1597 000d 00       		.ascii	"\000"
+ 1598 000e 00       		.ascii	"\000"
+ 1599 000f 00       		.ascii	"\000"
+ 1600 0010 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1600      00000000 
+ 1601 0018 CD000000 		.ascii	"\315\000\000\000"
+ 1602 001c 626F6172 		.ascii	"boardInit\000"
+ 1602      64496E69 
+ 1602      7400
+ 1603 0026 00       		.ascii	"\000"
+ 1604 0027 00       		.ascii	"\000"
+ 1605 0028 00       		.ascii	"\000"
+ 1606 0029 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1606      00000000 
+ 1607 0031 CF000000 		.ascii	"\317\000\000\000"
+ 1608 0035 73746D33 		.ascii	"stm32_clock_init\000"
+ 1608      325F636C 
+ 1608      6F636B5F 
+ 1608      696E6974 
+ 1608      00
+ 1609 0046 00       		.ascii	"\000"
+ 1610 0047 02       		.ascii	"\002"
+ 1611 0048 00       		.ascii	"\000"
+ 1612 0049 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1612      00000000 
+ 1613 0051 D1000000 		.ascii	"\321\000\000\000"
+ 1614              		.text
+ 1615              		.section	.gnu.lto_.ext_symtab.1f2b675c,"e",%progbits
+ 1616 0000 01       		.ascii	"\001"
+ 1617 0001 01       		.ascii	"\001"
+ 1618 0002 00       		.ascii	"\000"
+ 1619 0003 01       		.ascii	"\001"
+ 1620 0004 00       		.ascii	"\000"
+ 1621 0005 01       		.ascii	"\001"
+ 1622 0006 00       		.ascii	"\000"
+ 1623              		.text
+ 1624              		.section	.gnu.lto_.opts,"e",%progbits
+ 1625 0000 272D666E 		.ascii	"'-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-prote"
+ 1625      6F2D6F70 
+ 1625      656E6D70 
+ 1625      2720272D 
+ 1625      666E6F2D 
+ 1626 0033 6374696F 		.ascii	"ction=none' '-g' '-mcpu=cortex-m4' '-mthumb' '-mflo"
+ 1626      6E3D6E6F 
+ 1626      6E652720 
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 53
+
+
+ 1626      272D6727 
+ 1626      20272D6D 
+ 1627 0066 61742D61 		.ascii	"at-abi=soft' '-mlibarch=armv7e-m' '-march=armv7e-m'"
+ 1627      62693D73 
+ 1627      6F667427 
+ 1627      20272D6D 
+ 1627      6C696261 
+ 1628 0099 20272D4F 		.ascii	" '-O0' '-fomit-frame-pointer' '-falign-functions=16"
+ 1628      30272027 
+ 1628      2D666F6D 
+ 1628      69742D66 
+ 1628      72616D65 
+ 1629 00cc 2720272D 		.ascii	"' '-ffunction-sections' '-fdata-sections' '-fno-com"
+ 1629      6666756E 
+ 1629      6374696F 
+ 1629      6E2D7365 
+ 1629      6374696F 
+ 1630 00ff 6D6F6E27 		.ascii	"mon' '-flto' '-Xassembler' '-alms=./build/lst/board"
+ 1630      20272D66 
+ 1630      6C746F27 
+ 1630      20272D58 
+ 1630      61737365 
+ 1631 0132 2E6C7374 		.ascii	".lst'\000"
+ 1631      2700
+ 1632              		.text
+ 1633              		.comm	__gnu_lto_slim,1,1
+ 1634              		.ident	"GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"
+ARM GAS  C:\Users\angio\AppData\Local\Temp\cc6BowFj.s 			page 54
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 board.c
+C:\Users\angio\AppData\Local\Temp\cc6BowFj.s:23     .gnu.debuglto_.debug_info:00000000 board.c.997b76ef
+                            *COM*:00000001 __gnu_lto_slim
+
+NO UNDEFINED SYMBOLS
